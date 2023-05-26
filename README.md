@@ -365,7 +365,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/1
 		"coordinates": [46.851348, 9.532254],
 		"gastro": {
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-			"timetableInfo": "14.00 bis 17.00 Uhr",
+			"timetableInfo": "14.00 bis 17.00 Uhr"
 		},
 		"links": {
 			"info": {
@@ -738,4 +738,4 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/public-transport/list?eventI
 |:-------------------|:--------|:------------------------------------------------------------------------------------------|
 | icon               |string   |URL to SVG icon                                                                            |
 | links.sbb          |obj      |Link to SBB timetable (not in use for Langer Samstag, but may be useful in the future)     |
-| links.googleMaps   |obj      |Link to Google Maps (useful for directions feature in GoogleMaps)                          |
+| links.googleMaps   |obj      |Link to Google Maps (useful for directions feature in GoogleMaps in the future)            |
