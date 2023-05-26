@@ -409,8 +409,9 @@ Get a program list of an event.
 | Parameter          |Type     |Description                                                                                                    |                |
 |:-------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
 | eventId            |integer  |ID of event                                                                                                    |Required        |
-| categoryIds        |csv      |Comma-separated list of category IDs                                                                    |Optional        |
+| categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
+| forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
 | start              |string   |Start time >= than this value. ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:00:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
 | end                |string   |End time <= than this value. ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:30:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
 | lang               |string   |language code, default = `de`                                                                                  |Optional        |
@@ -485,8 +486,9 @@ Get a program list of an event.
 | Parameter          |Type     |Description                                                                                                    |                |
 |:-------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
 | eventId            |integer  |ID of event                                                                                                    |Required        |
-| categoryIds        |csv      |Comma-separated list of category IDs                                                                    |Optional        |
+| categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
+| forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
 | start              |string   |ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:00:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
 | end                |string   |ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:30:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
 | lang               |string   |language code, default = `de`                                                                                  |Optional        |
