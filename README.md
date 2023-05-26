@@ -6,7 +6,6 @@
 
 ### Category
 [GET category/list](#get-category-list)  
-[GET category/filters](#get-category-filters)  
 
 ### Location
 [GET location/list](#get-location-list)  
@@ -269,79 +268,6 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/category/list?eventId=1
 | icon           |string   |URL to SVG icon                      |
 
 
-## <a name="get-category-filters"></a>GET category/filters  
-
-### Description
-
-Get a list of all category filters of an event.
-
-### Headers
-
-| Header                 | Type     | Description    	       |                                |
-|:-----------------------|:---------|:-------------------------|:-------------------------------|
-| Api-Key                | string   | Unique API key           | Required                       |
-
-
-### Parameters
-
-| Parameter      |Type     |Description                        |                |
-|:---------------|:--------|:----------------------------------|:---------------|
-| eventId        |integer  |ID of event                        |Required        |
-| lang           |string   |language code, default = `de`      |Optional        |
-
-
-### Example Request
-
-```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/category/filters?eventId=1
-```
-
-### Example Response
-```
-{
-    "status": 200,
-    "result": [
-        {
-            "id": 1,
-            "name": "Theater, Tanz, Comedy",
-            "icon": "https://api.muva-app.ch/icon/stage.svg"
-        },
-        {
-            "id": 2,
-            "name": "Ausstellung, Führung",
-            "icon": "https://api.muva-app.ch/icon/exhibit.svg"
-        },
-        {
-            "id": 3,
-            "name": "Vortrag, Film, Workshop",
-            "icon": "https://api.muva-app.ch/icon/canvas.svg"
-        },
-        {
-            "id": 4,
-            "name": "Literatur, Poetry Slam",
-            "icon": "https://api.muva-app.ch/icon/book.svg"
-        },
-        {
-            "id": 5,
-            "name": "Musik, Gesang",
-            "icon": "https://api.muva-app.ch/icon/music.svg"
-        }
-    ]
-}
-```
-
-### Response Remarks
-
-| Parameter      |Type     |Description                          |
-|:---------------|:--------|:------------------------------------|
-| icon           |string   |URL to SVG icon                      |
-
-
-
-## <a name="get-location-list"></a>GET location/list  
-
-### Description
-
 Get a list of all locations of an event.
 
 ### Headers
@@ -435,6 +361,10 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/1
 		"email": false,
 		"phone": "+41 81 257 28 70",
 		"coordinates": [46.851348, 9.532254],
+		"gastro": {
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+			"timetableInfo": "14.00 bis 17.00 Uhr",
+		},
 		"links": {
 			"info": {
 				"url": "https://buendner-kunstmuseum.ch/",
@@ -474,7 +404,7 @@ Get a program list of an event.
 | Parameter          |Type     |Description                                                                                                    |                |
 |:-------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
 | eventId            |integer  |ID of event                                                                                                    |Required        |
-| categoryFilterIds  |csv      |Comma-separated list of category filter IDs                                                                    |Optional        |
+| categoryIds        |csv      |Comma-separated list of category IDs                                                                    |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
 | start              |string   |Start time >= than this value. ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:00:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
 | end                |string   |End time <= than this value. ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:30:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
@@ -550,7 +480,7 @@ Get a program list of an event.
 | Parameter          |Type     |Description                                                                                                    |                |
 |:-------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
 | eventId            |integer  |ID of event                                                                                                    |Required        |
-| categoryFilterIds  |csv      |Comma-separated list of category filter IDs                                                                    |Optional        |
+| categoryIds        |csv      |Comma-separated list of category IDs                                                                    |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
 | start              |string   |ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:00:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
 | end                |string   |ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:30:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
