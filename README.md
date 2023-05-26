@@ -20,7 +20,7 @@
 [GET public-transport/list](#get-public-transport-list)  
 
 ### Sound Walk
-sound-walk/:id
+GET sound-walk/:id
 
 
 ## Requests
