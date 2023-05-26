@@ -19,6 +19,9 @@
 ### Public Transport
 [GET public-transport/list](#get-public-transport-list)  
 
+### Sound Walk
+sound-walk/:id
+
 
 ## Requests
 
