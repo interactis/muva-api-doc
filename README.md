@@ -268,6 +268,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/category/list?eventId=1
 | icon           |string   |URL to SVG icon                      |
 
 
+## <a name="get-location-list"></a>GET location/list  
+
 Get a list of all locations of an event.
 
 ### Headers
