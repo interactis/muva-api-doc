@@ -431,7 +431,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
     "result": [
         {
             "id": 1,
-        	"programGuideId": 12,
+            "programGuideId": 12,
             "name": "Bündnerland, allerhand – Museumstour mal anders",
             "icon": "https://api.muva-app.ch/icon/tour.svg",
             "img": "https://api.muva-app.ch/img/event/600/museumstour.jpg",
@@ -468,6 +468,12 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
     ]
 }
 ```
+
+### Response Remarks
+
+| Parameter      |Type          |Description                                                                                  |
+|:---------------|:-------------|:--------------------------------------------------------------------------------------------|
+| programGuideId |integer       |ID shown in the program guide of the event                                                   |
 
 
 ## <a name="get-program-timeline"></a>GET program/timeline  
@@ -588,6 +594,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 
 | Parameter      |Type          |Description                                                                                  |
 |:---------------|:-------------|:--------------------------------------------------------------------------------------------|
+| programGuideId |integer       |ID shown in the program guide of the event                                                   |
 | program.start  |string        |ISO 8601 Date and time format incl. time zone offset. Let discuss: Better Unix timestamp?    |
 | program.end    |string        |ISO 8601 Date and time format incl. time zone offset. Let discuss: Better Unix timestamp?    |
 
@@ -676,6 +683,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 
 | Parameter      |Type     |Description                                                                |
 |:---------------|:--------|:--------------------------------------------------------------------------|
+| programGuideId |integer  |ID shown in the program guide of the event                                 |
 | links.info     |obj      |Multiple info links possible (for example, if there are multiple artists)  |
 
 
