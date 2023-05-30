@@ -412,8 +412,8 @@ Get a program list of an event.
 | categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
 | forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
-| start              |string   |Start time >= than this value. ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:00:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
-| end                |string   |End time <= than this value. ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:30:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
+| start              |integer  |Unix timestamp, start time >= than this value.                                                                 |Optional        |
+| end                |string   |Unix timestamp, start time <= than this value.                                                                 |Optional        |
 | lang               |string   |language code, default = `de`                                                                                  |Optional        |
 | detailed           |boolean  |`1` or `0` whether a detailed result is required (as in [GET program/:id](#get-program)), default = `0`        |Optional        |
 | imgSize            |string   |`small`, `medium` or `large`, default = `small`                                                                |Optional        |
@@ -431,6 +431,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
     "result": [
         {
             "id": 1,
+        	"programGuideId": 12,
             "name": "Bündnerland, allerhand – Museumstour mal anders",
             "icon": "https://api.muva-app.ch/icon/tour.svg",
             "img": "https://api.muva-app.ch/img/event/600/museumstour.jpg",
@@ -448,6 +449,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
         },
         {
             "id": 1,
+            "programGuideId": 14,
             "name": "Stumm und Kurz für Kids ",
             "icon": "https://api.muva-app.ch/icon/film.svg",
             "img": "https://api.muva-app.ch/img/event/600/stumm.jpg",
@@ -489,8 +491,8 @@ Get a program list of an event.
 | categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
 | forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
-| start              |string   |ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:00:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
-| end                |string   |ISO 8601 Date and time format incl. time zone offset, e.g. 2023-11-11T13:30:00+01:00 - Let discuss: Better Unix timestamp?                      |Optional        |
+| start              |integer  |Unix timestamp, start time >= than this value.                                                                 |Optional        |
+| end                |string   |Unix timestamp, start time <= than this value.                                                                 |Optional        |
 | lang               |string   |language code, default = `de`                                                                                  |Optional        |
 
 ### Example Request
@@ -513,6 +515,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 			"program": [
 				{
 					"id": 1,
+					"programGuideId": 12,
 					"name": "Bündnerland, allerhand – Museumstour mal anders",
 					"icon": "https://api.muva-app.ch/icon/tour.svg",
 					"start": "2023-11-11T13:00:00+01:00",
@@ -520,6 +523,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 				},
 				{
 					"id": 2,
+					"programGuideId": 15,
 					"name": "Stick mit! Tauche ein in die Welt der Stickerei!",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
 					"start": "2023-11-11T13:30:00+01:00",
@@ -527,6 +531,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 				},
 				{
 					"id": 3,
+					"programGuideId": 16,
 					"name": "Ausstellung «Venedigsche Sterne. Kunst und Stickerei»",
 					"icon": "https://api.muva-app.ch/icon/fuehrung.svg",
 					"start": "2023-11-11T14:30:00+01:00",
@@ -543,6 +548,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 			"program": [
 				{
 					"id": 4,
+					"programGuideId": 13,
 					"name": "Stumm und Kurz für Kids ",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
 					"start": "2023-11-11T12:00:00+01:00",
@@ -550,6 +556,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 				},
 				{
 					"id": 5,
+					"programGuideId": 20,
 					"name": "Stumm und Kurz",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
 					"start": "2023-11-11T13:00:00+01:00",
@@ -557,6 +564,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 				},
 				{
 					"id": 4,
+					"programGuideId": 21,
 					"name": "Stumm und Kurz für Kids ",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
 					"start": "2023-11-11T16:00:00+01:00",
@@ -564,6 +572,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
 				},
 				{
 					"id": 5,
+					"programGuideId": 22,
 					"name": "Stumm und Kurz",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
 					"start": "2023-11-11 17:00:00+01:00",
@@ -616,6 +625,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
     "status": 200,
     "result": {
 		"id": 1,
+		"programGuideId": 12,
 		"name": "Bündnerland, allerhand – Museumstour mal anders",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
 		"icon": "https://api.muva-app.ch/icon/tour.svg",
