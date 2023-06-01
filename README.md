@@ -51,7 +51,7 @@ If successful, the status code `200` will be returned.
 
 ### Description
 
-Get all messages of the application in the available languages to translate the strings in the application into the user's language.
+Get all messages of the app in the available languages. Use it to translate the user interface into the user's language.
 
 ### Headers
 
