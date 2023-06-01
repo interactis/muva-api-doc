@@ -64,7 +64,7 @@ Get all messages of the app in the available languages. Use it to translate the 
 
 | Parameter      |Type     |Description                                                          |                |
 |:---------------|:--------|:--------------------------------------------------------------------|:---------------|
-| lang           |string   |language code: `de`, `fr`, `it`, `rm` or `en`, default = `de`        |required        |
+| lang           |string   |language code: `de`, `fr`, `it`, `rm` or `en`, default = `de`        |optional        |
 
 
 ### Example Request
