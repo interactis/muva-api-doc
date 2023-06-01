@@ -70,7 +70,7 @@ Get all app messages in the available languages. Use it to translate the user in
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/app/messages?lang=de
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/app/messages
 ```
 
 ### Example Response
