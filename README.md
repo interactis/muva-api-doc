@@ -1,5 +1,8 @@
 # REST API Documentation
 
+### App
+[GET app/messages](#get-app-messages)  
+
 ### Event
 [GET event/list](#get-event-list)  
 [GET event/:id](#get-event)  
@@ -42,6 +45,66 @@ All responses will contain one if these status codes in the response header and 
 
 If successful, the status code `200` will be returned.
 
+
+
+## <a name="get-app-messages"></a>GET app/messages  
+
+### Description
+
+Get all messages of the application in the available languages to translate the strings in the application into the user's language.
+
+### Headers
+
+| Header                 | Type     | Description    	       |                                |
+|:-----------------------|:---------|:-------------------------|:-------------------------------|
+| Api-Key                | string   | Unique API key           | Required                       |
+
+
+### Parameters
+
+| Parameter      |Type     |Description                                                          |                |
+|:---------------|:--------|:--------------------------------------------------------------------|:---------------|
+| lang           |string   |language code: `de`, `fr`, `it`, `rm` or `en`, default = `de`        |required        |
+
+
+### Example Request
+
+```
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/app/messages?lang=de
+```
+
+### Example Response
+```
+{
+    "status": 200,
+    "result": {
+    	"Overview": "Übersicht",
+    	"Bookmarks": "Merkzettel",
+    	"Bookmark": "Merken",
+    	"Bookmarked": "Gemerkt",
+    	"Share": "Teilen",
+    	"Filter": "Filter",
+    	"Apply filters": "Filter anwenden",
+    	"Location": "Location",
+        "Category": "Kategorie",
+    	"Time / Date": "Zeit / Datum",
+    	"View": "Ansicht",
+    	"Info": "Info",
+    	"Event info": "Event Info",
+    	"Event program": "Event Programm",
+    	"Program list": "Programm Liste",
+    	"Program map": "Programm Karte",
+    	"Program schedule": "Programm Zeitplan",
+    	"To the program": "Zum Programm",
+        "Listen": "Anhören",
+        "Contact": "Kontakt"
+    }
+}
+```
+
+### Response Remarks
+
+The key is always in English and serves as an identifier for the corresponding string.
 
 ## <a name="get-event-list"></a>GET event/list  
 
