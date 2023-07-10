@@ -239,9 +239,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 		"img": "https://api.muva-app.ch/img/space/1600/langer-samstag.jpg",
 		"status": "active",
 		"startDate": "2023-11-11",
+		"startTime": "1699693200",
 		"endDate": "2023-11-11",
+		"endTime": "1699740000",
 		"languages": ["de"],
-		 "audios": [
+		"audios": [
             {
                 "name": "Test Audio File 1",
                 "description": "Lorem Ipsum...",
@@ -281,6 +283,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 | type           |string   |`event` or `soundwalk` (will be extended in the future if necessary)             |
 | status         |string   |`preview`, `active` or `legacy`                                                  |
 | languages      |array    |Available content languages                                                      |
+| startTime      |integer  |Unix timestamp                                                                   |
+| endTime        |integer  |Unix timestamp                                                                   |
 
 
 ## <a name="get-category-list"></a>GET category/list  
@@ -604,24 +608,24 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
 					"programGuideId": 12,
 					"name": "Bündnerland, allerhand – Museumstour mal anders",
 					"icon": "https://api.muva-app.ch/icon/tour.svg",
-					"start": "2023-11-11T13:00:00+01:00",
-					"end": "2023-11-11T13:30:00+01:00"				
+					"startTime": 1699693200,
+					"endTime": 1699694200				
 				},
 				{
 					"id": 2,
 					"programGuideId": 15,
 					"name": "Stick mit! Tauche ein in die Welt der Stickerei!",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"start": "2023-11-11T13:30:00+01:00",
-					"end": "2023-11-11T14:00:00+01:00"				
+					"startTime": 1699693200,
+					"endTime": 1699694200				
 				},
 				{
 					"id": 3,
 					"programGuideId": 16,
 					"name": "Ausstellung «Venedigsche Sterne. Kunst und Stickerei»",
 					"icon": "https://api.muva-app.ch/icon/fuehrung.svg",
-					"start": "2023-11-11T14:30:00+01:00",
-					"end": "2023-11-11T15:00:00+01:00"				
+					"startTime": 1699693200,
+					"endTime": 1699694200				
 				}
 			]
         },
@@ -637,32 +641,32 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
 					"programGuideId": 13,
 					"name": "Stumm und Kurz für Kids ",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"start": "2023-11-11T12:00:00+01:00",
-					"end": "2023-11-11T12:30:00+01:00"				
+					"startTime": 1699693200,
+					"endTime": 1699694200				
 				},
 				{
 					"id": 5,
 					"programGuideId": 20,
 					"name": "Stumm und Kurz",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"start": "2023-11-11T13:00:00+01:00",
-					"end": "2023-11-11T13:30:00+01:00"				
+					"startTime": 1699693200,
+					"endTime": 1699694200				
 				},
 				{
 					"id": 4,
 					"programGuideId": 21,
 					"name": "Stumm und Kurz für Kids ",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"start": "2023-11-11T16:00:00+01:00",
-					"end": "2023-11-11T16:30:00+01:00"				
+					"startTime": 1699693200,
+					"endTime": 1699694200				
 				},
 				{
 					"id": 5,
 					"programGuideId": 22,
 					"name": "Stumm und Kurz",
 					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"start": "2023-11-11 17:00:00+01:00",
-					"end": "2023-11-11 17:30:00+01:00"				
+					"startTime": 1699693200
+					"endTime": 1699694200				
 				}
 			]
         }
@@ -672,11 +676,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
 
 ### Response Remarks
 
-| Parameter      |Type          |Description                                                                                  |
-|:---------------|:-------------|:--------------------------------------------------------------------------------------------|
-| programGuideId |integer       |ID shown in the program guide of the event (`false` if no program guide)                     |
-| program.start  |string        |ISO 8601 Date and time format incl. time zone offset. Let discuss: Better Unix timestamp?    |
-| program.end    |string        |ISO 8601 Date and time format incl. time zone offset. Let discuss: Better Unix timestamp?    |
+| Parameter          |Type          |Description                                                                                  |
+|:-------------------|:-------------|:--------------------------------------------------------------------------------------------|
+| programGuideId     |integer       |ID shown in the program guide of the event (`false` if no program guide)                     |
+| program.startTime  |integer       |Unix timestamp                                                                               |
+| program.endTime    |integer       |Unix timestamp                                                                               |
 
 
 ## <a name="get-program"></a>GET program/:id
