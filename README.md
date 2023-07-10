@@ -125,6 +125,7 @@ MUVA is organized by spaces. Spaces are virtual exhibition spaces within the MUV
 |:---------------|:--------|:--------------------------------------------------------------------------------------------------------|:---------------|
 | detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET space/:id](#get-space)), default = `0`      |Optional        |
 | imgSize        |string   |`small`, `medium` or `large`, default = `small`                                                          |Optional        |
+| lang           |string   |language code, default = `de`                                                                            |Optional        |
 
 
 ### Example Request
@@ -213,7 +214,7 @@ Get space infos by space ID.
 
 | Parameter      |Type     |Description                                                                 |                |
 |:---------------|:--------|:---------------------------------------------------------------------------|:---------------|
-| id             |integer   |ID of space                                                                |Required        |
+| id             |integer  |ID of space                                                                |Required        |
 | lang           |string   |language code, default = `de`                                               |Optional        |
 | imgSize        |string   |`small`, `medium` or `large`, default = `large`                             |Optional        |
 
