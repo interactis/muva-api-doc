@@ -1,11 +1,11 @@
 # REST API Documentation
 
 ### App
-[GET app/messages](#get-app-messages)  
+[GET app/locales](#get-app-locales)  
 
-### Event
-[GET event/list](#get-event-list)  
-[GET event/:id](#get-event)  
+### Space
+[GET space/list](#get-space-list)  
+[GET space/:id](#get-space)  
 
 ### Category
 [GET category/list](#get-category-list)  
@@ -47,11 +47,11 @@ If successful, the status code `200` will be returned.
 
 
 
-## <a name="get-app-messages"></a>GET app/messages  
+## <a name="get-app-locales"></a>GET app/locales  
 
 ### Description
 
-Get all app messages in the available languages. Use it to translate the user interface into the user's language.
+Get all strings that are used in the app in the available languages. Use it to translate the user interface into the user's language.
 
 ### Headers
 
@@ -106,11 +106,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/app/messages
 
 The key is always in English and serves as an identifier for the corresponding string.
 
-## <a name="get-event-list"></a>GET event/list  
+## <a name="get-space-list"></a>GET space/list  
 
 ### Description
 
-Get a list of all events.
+MUVA is organized by spaces. Spaces are virtual exhibition spaces within the MUVA App. It can be an physical event or a virtual Tour (or any kind of other virtual space type in the future).
 
 ### Headers
 
@@ -123,14 +123,14 @@ Get a list of all events.
 
 | Parameter      |Type     |Description                                                                                              |                |
 |:---------------|:--------|:--------------------------------------------------------------------------------------------------------|:---------------|
-| detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET event/:id](#get-event)), default = `0`      |Optional        |
+| detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET space/:id](#get-space)), default = `0`      |Optional        |
 | imgSize        |string   |`small`, `medium` or `large`, default = `small`                                                          |Optional        |
 
 
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/list
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
 ```
 
 ### Example Response
@@ -147,7 +147,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/list
             "city": "Chur",
             "intro": "Lorem ipsum dolor sit amet.",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            "img": "https://api.muva-app.ch/img/event/600/langer-samstag.jpg",
+            "img": "https://api.muva-app.ch/img/space/600/langer-samstag.jpg",
             "status": "active",
             "startDate": "2023-11-11",
             "endDate": "2023-11-11",
@@ -162,7 +162,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/list
             "city": "Chur",
             "intro": "Lorem ipsum dolor sit amet.",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            "img": "https://api.muva-app.ch/img/event/600/sound-walk.jpg",
+            "img": "https://api.muva-app.ch/img/space/600/sound-walk.jpg",
             "status": "active",
             "startDate": "2023-11-11",
             "endDate": "2024-03-31",
@@ -177,7 +177,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/list
             "city": "Chur",
             "intro": "Lorem ipsum dolor sit amet.",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            "img": "https://api.muva-app.ch/img/event/600/street-art-festival.jpg",
+            "img": "https://api.muva-app.ch/img/space/600/street-art-festival.jpg",
             "status": "preview",
             "startDate": "2023-11-11",
             "endDate": "2024-03-31",
@@ -196,11 +196,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/list
 | languages      |array    |Available content languages                                                      |
 
 
-## <a name="get-event"></a>GET event/:id
+## <a name="get-space"></a>GET space/:id
 
 ### Example Request
 
-Get event infos by event ID.
+Get space infos by space ID.
 
 
 ### Headers
@@ -213,14 +213,14 @@ Get event infos by event ID.
 
 | Parameter      |Type     |Description                                                                 |                |
 |:---------------|:--------|:---------------------------------------------------------------------------|:---------------|
-| id             |integer   |ID of event                                                                |Required        |
+| id             |integer   |ID of space                                                                |Required        |
 | lang           |string   |language code, default = `de`                                               |Optional        |
 | imgSize        |string   |`small`, `medium` or `large`, default = `large`                             |Optional        |
 
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/1
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 ```
 
 ### Example Response
@@ -236,13 +236,30 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/1
 		"city": "Chur",
 		"intro": "Lorem ipsum dolor sit amet.",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-		"img": "https://api.muva-app.ch/img/event/1600/langer-samstag.jpg",
+		"img": "https://api.muva-app.ch/img/space/1600/langer-samstag.jpg",
 		"status": "active",
 		"startDate": "2023-11-11",
 		"endDate": "2023-11-11",
 		"languages": ["de"],
-		"audio": "https://api.muva-app.ch/video/event/langer-samstag.mp3",
-		"video": "https://api.muva-app.ch/audio/event/langer-samstag.mp4",
+		 "audios": [
+            {
+                "name": "Test Audio File 1",
+                "description": "Lorem Ipsum...",
+                "url": "https://api.muva-app.ch/audio/space/langer-samstag.mp3"
+            },
+            {
+                "name": "Test Audio File 2",
+                "description": "Lorem Ipsum...",
+                "url": "https://api.muva-app.ch/audio/space/langer-samstag-2.mp3"
+            }
+        ],
+        "videos": [
+            {
+                "name": "Test Video File",
+                "description": "Lorem Ipsum...",
+                "url": "https://api.muva-app.ch/video/space/langer-samstag.mp3"
+            }
+        ],
 		"links": {
 			"info": {
 				"url": "https://langersamstag.ch/",
@@ -270,7 +287,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/event/1
 
 ### Description
 
-Get a list of all categories of an event.
+Get a list of all categories of a space.
 
 ### Headers
 
@@ -283,14 +300,14 @@ Get a list of all categories of an event.
 
 | Parameter      |Type     |Description                        |                |
 |:---------------|:--------|:----------------------------------|:---------------|
-| eventId        |integer  |ID of event                        |Required        |
+| spaceId        |integer  |ID of space                        |Required        |
 | lang           |string   |language code, default = `de`      |Optional        |
 
 
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/category/list?eventId=1
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/category/list?spaceId=1
 ```
 
 ### Example Response
@@ -336,7 +353,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/category/list?eventId=1
 
 ## <a name="get-location-list"></a>GET location/list  
 
-Get a list of all locations of an event.
+Get a list of all locations of a space.
 
 ### Headers
 
@@ -349,7 +366,7 @@ Get a list of all locations of an event.
 
 | Parameter      |Type     |Description                                                                                                    |                |
 |:---------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
-| eventId        |integer  |ID of event                                                                                                    |Required        |
+| spaceId        |integer  |ID of space                                                                                                    |Required        |
 | lang           |string   |language code, default = `de`                                                                                  |Optional        |
 | detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET location/:id](#get-location)), default = `0`      |Optional        |
 
@@ -357,7 +374,7 @@ Get a list of all locations of an event.
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/list?eventId=1
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/list?spaceId=1
 ```
 
 ### Example Response
@@ -420,7 +437,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/1
 		"id": 1,
 		"name": "Bündner Kunstmuseum",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-		"img": "https://api.muva-app.ch/img/event/1200/langer-samstag.jpg",
+		"img": "https://api.muva-app.ch/img/space/1200/langer-samstag.jpg",
 		"street": "Bahnhofstrasse",
 		"streetNumber": "35",
 		"addressAddition": false,
@@ -458,7 +475,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/1
 
 ### Description
 
-Get a program list of an event.
+Get a program list of an space.
 
 ### Headers
 
@@ -471,7 +488,7 @@ Get a program list of an event.
 
 | Parameter          |Type     |Description                                                                                                    |                |
 |:-------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
-| eventId            |integer  |ID of event                                                                                                    |Required        |
+| spaceId            |integer  |ID of space                                                                                                    |Required        |
 | categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
 | forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
@@ -484,7 +501,7 @@ Get a program list of an event.
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?spaceId=1
 ```
 
 ### Example Response
@@ -497,7 +514,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
             "programGuideId": 12,
             "name": "Bündnerland, allerhand – Museumstour mal anders",
             "icon": "https://api.muva-app.ch/icon/tour.svg",
-            "img": "https://api.muva-app.ch/img/event/600/museumstour.jpg",
+            "img": "https://api.muva-app.ch/img/space/600/museumstour.jpg",
             "startDate": "2023-11-11",
             "endDate": "2023-11-11",
             "timetableInfo": "13.00, 17.00, 19.00 Uhr",
@@ -515,7 +532,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
             "programGuideId": 14,
             "name": "Stumm und Kurz für Kids ",
             "icon": "https://api.muva-app.ch/icon/film.svg",
-            "img": "https://api.muva-app.ch/img/event/600/stumm.jpg",
+            "img": "https://api.muva-app.ch/img/space/600/stumm.jpg",
            	"startDate": "2023-11-11",
 			"endDate": "2023-11-11",
             "timetableInfo": "13.00, 17.00, 19.00 Uhr",
@@ -543,7 +560,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?eventId=1
 
 ### Description
 
-Get a program list of an event.
+Get a program list of a space.
 
 ### Headers
 
@@ -556,7 +573,7 @@ Get a program list of an event.
 
 | Parameter          |Type     |Description                                                                                                    |                |
 |:-------------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
-| eventId            |integer  |ID of event                                                                                                    |Required        |
+| spaceId            |integer  |ID of space                                                                                                    |Required        |
 | categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
 | forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
@@ -567,7 +584,7 @@ Get a program list of an event.
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?eventId=1
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
 ```
 
 ### Example Response
@@ -699,20 +716,43 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 		"name": "Bündnerland, allerhand – Museumstour mal anders",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
 		"icon": "https://api.muva-app.ch/icon/tour.svg",
-		"img": "https://api.muva-app.ch/img/event/1600/museumstour.jpg",
-		"audio": "https://api.muva-app.ch/video/event/museumstour.mp3",
-		"video": false,
+		"img": "https://api.muva-app.ch/img/space/1600/museumstour.jpg",
 		"startDate": "2023-11-11",
 		"endDate": "2023-11-11",
 		"timetableInfo": "13.00, 17.00, 19.00 Uhr",
 		"duration": "30 Min.",
 		"category": "Musik",
 		"location": {
-			"id": 1,
-			"name": "Bündner Kunstmuseum",
-			"city": "Chur",
-			"coordinates": [46.851348, 9.532254]
-		},
+            "id": 1,
+            "name": "Bündner Kunstmuseum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            "img": "https://api.muva-app.ch/img/test.jpg",
+            "street": "Bahnhofstrasse",
+            "streetNumber": "35",
+            "addressAddition": false,
+            "postalCode": 7000,
+            "city": "Chur",
+            "email": false,
+            "phone": "+41 81 257 28 70",
+            "coordinates": [
+                46.851348,
+                9.532254
+            ],
+            "gastro": {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+                "timetableInfo": "14.00 bis 17.00 Uhr"
+            },
+            "links": {
+                "info": {
+                    "url": "https://buendner-kunstmuseum.ch/",
+                    "text": "buendner-kunstmuseum.ch"
+                },
+                "googleMaps": {
+                    "url": "https://goo.gl/maps/ru5B57LoVCTorLQW8",
+                    "text": "Google Maps"
+                }
+            }
+        },
 		"categories": [
 			{
 				"id": 1,
@@ -725,6 +765,19 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 				"main": false
 			}
 		],
+		 "audios": [
+            {
+                "name": "Test Audio File 1",
+                "description": "Lorem Ipsum...",
+                "url": "https://api.muva-app.ch/audio/program/test.mp3"
+            },
+            {
+                "name": "Test Audio File 2",
+                "description": "Lorem Ipsum...",
+                "url": "https://api.muva-app.ch/audio/program/test-2.mp3"
+            }
+        ],
+        "videos": false,
 		"links": {
 			"info": [
 				{
@@ -755,7 +808,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 
 ### Description
 
-Get a list of public transport stops of an event.
+Get a list of public transport stops of a space.
 
 ### Headers
 
@@ -768,14 +821,14 @@ Get a list of public transport stops of an event.
 
 | Parameter      |Type     |Description                        |                |
 |:---------------|:--------|:----------------------------------|:---------------|
-| eventId        |integer  |ID of event                        |Required        |
+| spaceId        |integer  |ID of space                        |Required        |
 | lang           |string   |language code, default = `de`      |Optional        |
 
 
 ### Example Request
 
 ```
-curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/public-transport/list?eventId=1
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/public-transport/list?spaceId=1
 ```
 
 ### Example Response
