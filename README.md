@@ -110,7 +110,7 @@ The key is always in English and serves as an identifier for the corresponding s
 
 ### Description
 
-MUVA is organized by spaces. Spaces are virtual exhibition spaces within the MUVA App. It can be an physical event or a virtual Tour (or any kind of other virtual space type in the future).
+MUVA is organized by spaces. Spaces are virtual exhibition spaces within the MUVA App. It can be a physical event or a virtual tour (or any kind of other virtual space type in the future).
 
 ### Headers
 
