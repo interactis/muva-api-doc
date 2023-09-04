@@ -124,7 +124,7 @@ MUVA is organized by spaces. Spaces are virtual exhibition spaces within the MUV
 | Parameter      |Type     |Description                                                                                              |                |
 |:---------------|:--------|:--------------------------------------------------------------------------------------------------------|:---------------|
 | detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET space/:id](#get-space)), default = `0`      |Optional        |
-| imgSize        |string   |`small`, `medium` or `large`, default = `small`                                                          |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `xlarge`, default = `small`                                                |Optional        |
 | lang           |string   |language code, default = `de`                                                                            |Optional        |
 
 
@@ -214,9 +214,9 @@ Get space infos by space ID.
 
 | Parameter      |Type     |Description                                                                 |                |
 |:---------------|:--------|:---------------------------------------------------------------------------|:---------------|
-| id             |integer  |ID of space                                                                |Required        |
+| id             |integer  |ID of space                                                                 |Required        |
 | lang           |string   |language code, default = `de`                                               |Optional        |
-| imgSize        |string   |`small`, `medium` or `large`, default = `large`                             |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `xlarge`, default = `large`                   |Optional        |
 
 ### Example Request
 
@@ -426,7 +426,7 @@ Get location infos by location ID.
 |:---------------|:--------|:---------------------------------------------------------------------------|:---------------|
 | id             |integer  |ID of location                                                              |Required        |
 | lang           |string   |language code, default = `de`                                               |Optional        |
-| imgSize        |string   |`small`, `medium` or `large`, default = `medium`                            |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `large`, default = `medium`                   |Optional        |
 
 ### Example Request
 
@@ -501,7 +501,7 @@ Get a program list of an space.
 | end                |string   |Unix timestamp, start time <= than this value.                                                                 |Optional        |
 | lang               |string   |language code, default = `de`                                                                                  |Optional        |
 | detailed           |boolean  |`1` or `0` whether a detailed result is required (as in [GET program/:id](#get-program)), default = `0`        |Optional        |
-| imgSize            |string   |`small`, `medium` or `large`, default = `small`                                                                |Optional        |
+| imgSize            |string   |`small`, `medium`, `large` or `xlarge`, default = `small`                                                      |Optional        |
 
 ### Example Request
 
@@ -703,7 +703,7 @@ Get program infos by program ID.
 |:---------------|:--------|:---------------------------------------------------------------------------|:---------------|
 | id             |integer  |ID of program                                                               |Required        |
 | lang           |string   |language code, default = `de`                                               |Optional        |
-| imgSize        |string   |`small`, `medium` or `large`, default = `large`                             |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `xlarge`, default = `large`                   |Optional        |
 
 ### Example Request
 
