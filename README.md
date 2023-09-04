@@ -184,7 +184,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
             "img": "https://api.muva-app.ch/img/space/600/street-art-festival.jpg",
             "status": "preview",
-           	"startDate": "2023-11-11",
+            "startDate": "2023-11-11",
             "startTime": 1699700400,
             "endDate": "2023-11-12",
             "endTime": 1699754400,
@@ -248,9 +248,9 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 		"startDate": "2023-11-11",
 		"startTime": "1699693200",
 		"startDate": "2023-11-11",
-        "startTime": 1699700400,
-        "endDate": "2023-11-12",
-        "endTime": 1699754400,
+		"startTime": 1699700400,
+		"endDate": "2023-11-12",
+		"endTime": 1699754400,
 		"languages": ["de"],
 		"audios": [
             {
