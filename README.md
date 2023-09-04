@@ -382,7 +382,7 @@ Get a list of all locations of a space.
 | spaceId        |integer  |ID of space                                                                                                    |Required        |
 | lang           |string   |language code, default = `de`                                                                                  |Optional        |
 | detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET location/:id](#get-location)), default = `0`      |Optional        |
-
+| imgSize        |string   |`small`, `medium`, `large` or `xlarge`, default = `small`                                                      |Optional        |
 
 ### Example Request
 
