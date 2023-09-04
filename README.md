@@ -151,7 +151,9 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             "img": "https://api.muva-app.ch/img/space/600/langer-samstag.jpg",
             "status": "active",
             "startDate": "2023-11-11",
-            "endDate": "2023-11-11",
+            "startTime": 1699700400,
+            "endDate": "2023-11-12",
+            "endTime": 1699754400,
             "languages": ["de"]
         },
         {
@@ -166,7 +168,9 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             "img": "https://api.muva-app.ch/img/space/600/sound-walk.jpg",
             "status": "active",
             "startDate": "2023-11-11",
-            "endDate": "2024-03-31",
+            "startTime": 1699700400,
+            "endDate": "2023-11-12",
+            "endTime": 1699754400,
             "languages": ["de", "rm"]
         },
         {
@@ -180,8 +184,10 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
             "img": "https://api.muva-app.ch/img/space/600/street-art-festival.jpg",
             "status": "preview",
-            "startDate": "2023-11-11",
-            "endDate": "2024-03-31",
+           	"startDate": "2023-11-11",
+            "startTime": 1699700400,
+            "endDate": "2023-11-12",
+            "endTime": 1699754400,
             "languages": ["de"]
         }
     ]
@@ -241,8 +247,10 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 		"status": "active",
 		"startDate": "2023-11-11",
 		"startTime": "1699693200",
-		"endDate": "2023-11-11",
-		"endTime": "1699740000",
+		"startDate": "2023-11-11",
+        "startTime": 1699700400,
+        "endDate": "2023-11-12",
+        "endTime": 1699754400,
 		"languages": ["de"],
 		"audios": [
             {
