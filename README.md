@@ -606,6 +606,7 @@ Get a program list of a space.
 | spaceId            |integer  |ID of space                                                                                                    |Required        |
 | categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
+| programIds         |csv      |Comma-separated list of program IDs                                                                            |Optional        |
 | forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
 | start              |integer  |Unix timestamp, start time >= than this value.                                                                 |Optional        |
 | end                |string   |Unix timestamp, start time <= than this value.                                                                 |Optional        |
