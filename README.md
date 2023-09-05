@@ -397,19 +397,39 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/list?spaceId=1
     "result": [
         {
             "id": 1,
-            "name": "Bündner Kunstmuseum"
+            "name": "Bündner Kunstmuseum",
+            "city": "Chur",
+            "coordinates": [
+                9.52926394,
+                46.849735585
+            ]
         },
         {
             "id": 2,
-            "name": "Bündner Naturmuseum"
+            "name": "Bündner Naturmuseum",
+            "city": "Chur",
+            "coordinates": [
+                9.52926394,
+                46.849735585
+            ]
         },
         {
             "id": 3,
-            "name": "Chur Tourismus"
+            "name": "Chur Tourismus",
+            "city": "Chur",
+            "coordinates": [
+                9.52926394,
+                46.849735585
+            ]
         },
         {
             "id": 4,
-            "name": "CUADRO22"
+            "name": "CUADRO22",
+            "city": "Chur",
+            "coordinates": [
+                9.52926394,
+                46.849735585
+            ]
         }
     ]
 }
@@ -504,6 +524,7 @@ Get a program list of an space.
 | spaceId            |integer  |ID of space                                                                                                    |Required        |
 | categoryIds        |csv      |Comma-separated list of category IDs                                                                           |Optional        |
 | locationIds        |csv      |Comma-separated list of location IDs                                                                           |Optional        |
+| programIds         |csv      |Comma-separated list of program IDs                                                                            |Optional        |
 | forKids            |boolean  |`1` or `0` whether a program is for kids, default = `0`                                                        |Optional        |
 | start              |integer  |Unix timestamp, start time >= than this value.                                                                 |Optional        |
 | end                |string   |Unix timestamp, start time <= than this value.                                                                 |Optional        |
@@ -528,8 +549,6 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?spaceId=1
             "name": "Bündnerland, allerhand – Museumstour mal anders",
             "icon": "https://api.muva-app.ch/icon/tour.svg",
             "img": "https://api.muva-app.ch/img/space/600/museumstour.jpg",
-            "startDate": "2023-11-11",
-            "endDate": "2023-11-11",
             "timetableInfo": "13.00, 17.00, 19.00 Uhr",
             "duration": "30 Min.",
             "category": "Musik",
@@ -546,8 +565,6 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?spaceId=1
             "name": "Stumm und Kurz für Kids ",
             "icon": "https://api.muva-app.ch/icon/film.svg",
             "img": "https://api.muva-app.ch/img/space/600/stumm.jpg",
-           	"startDate": "2023-11-11",
-			"endDate": "2023-11-11",
             "timetableInfo": "13.00, 17.00, 19.00 Uhr",
             "duration": "30 Min.",
             "category": "Film",
