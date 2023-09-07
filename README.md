@@ -141,54 +141,64 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
     "result": [
         {
             "id": 1,
-            "color": "#BE6CFC",
+            "color": "#BF66FF",
             "type": "event",
             "label": "Event",
             "name": "Langer Samstag",
             "city": "Chur",
-            "intro": "Lorem ipsum dolor sit amet.",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            "img": "https://api.muva-app.ch/img/space/600/langer-samstag.jpg",
-            "status": "active",
-            "startDate": "2023-11-11",
-            "startTime": 1699700400,
-            "endDate": "2023-11-12",
-            "endTime": 1699754400,
-            "languages": ["de"]
-        },
-        {
-            "id": 2,
-            "color": "#6BC1EE",
-            "type": "soundwalk",
-            "label": "SoundWalk",
-            "name": "Türme by Luca Sisera",
-            "city": "Chur",
-            "intro": "Lorem ipsum dolor sit amet.",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            "img": "https://api.muva-app.ch/img/space/600/sound-walk.jpg",
-            "status": "active",
-            "startDate": "2023-11-11",
-            "startTime": 1699700400,
-            "endDate": "2023-11-12",
-            "endTime": 1699754400,
-            "languages": ["de", "rm"]
-        },
-        {
-            "id": 3,
-            "color": "#40BD5F",
-            "type": "event",
-            "label": "Event",
-            "name": "Street Art Festival",
-            "city": "Chur",
-            "intro": "Lorem ipsum dolor sit amet.",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            "img": "https://api.muva-app.ch/img/space/600/street-art-festival.jpg",
+            "intro": "Lorem ipsum  dolor sit amet, consectetur adipiscing elit, sed do eiusmoddamet, consec, sed do eiusmoddolor sit amet",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "img": "https://staging-api.muva-app.ch/img/space/crop/500/_test-img.jpg",
             "status": "preview",
             "startDate": "2023-11-11",
             "startTime": 1699700400,
             "endDate": "2023-11-12",
             "endTime": 1699754400,
-            "languages": ["de"]
+            "languages": [
+                "de"
+            ]
+        },
+        {
+            "id": 2,
+            "color": "#39BF5B",
+            "type": "soundwalk",
+            "label": "SoundWalk",
+            "name": "Türmer von Luca Sisera",
+            "city": "Chur",
+            "intro": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "img": "https://staging-api.muva-app.ch/img/placeholder/500/placeholder.jpg",
+            "status": "preview",
+            "startDate": "2023-11-11",
+            "startTime": 1699698600,
+            "endDate": "2024-01-31",
+            "endTime": 1706741940,
+            "languages": [
+                "de"
+            ]
+        },
+        {
+            "id": 3,
+            "color": "#FFA826",
+            "type": "audio",
+            "label": "Audio",
+            "name": "Türmer: Historischer Hintergrund",
+            "city": "",
+            "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "img": "https://staging-api.muva-app.ch/img/placeholder/500/placeholder.jpg",
+            "status": "active",
+            "startDate": "2023-10-23",
+            "startTime": 1698033600,
+            "endDate": "2024-01-31",
+            "endTime": 1706741940,
+            "languages": [
+                "de",
+                "fr",
+                "it",
+                "rm",
+                "en"
+            ]
         }
     ]
 }
@@ -235,53 +245,36 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 {
     "status": 200,
     "result": {
-		"id": 1,
-		"color": "#BE6CFC",
-		"type": "event",
-		"label": "Event",
-		"name": "Langer Samstag",
-		"city": "Chur",
-		"intro": "Lorem ipsum dolor sit amet.",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-		"img": "https://api.muva-app.ch/img/space/1600/langer-samstag.jpg",
-		"status": "active",
-		"startDate": "2023-11-11",
-		"startTime": "1699693200",
-		"startDate": "2023-11-11",
-		"startTime": 1699700400,
-		"endDate": "2023-11-12",
-		"endTime": 1699754400,
-		"languages": ["de"],
-		"audios": [
-            {
-                "name": "Test Audio File 1",
-                "description": "Lorem Ipsum...",
-                "url": "https://api.muva-app.ch/audio/space/langer-samstag.mp3"
+        "id": 1,
+        "color": "#BF66FF",
+        "type": "event",
+        "label": "Event",
+        "name": "Langer Samstag",
+        "city": "Chur",
+        "intro": "Lorem ipsum  dolor sit amet, consectetur adipiscing elit, sed do eiusmoddamet, consec, sed do eiusmoddolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "img": "https://staging-api.muva-app.ch/img/space/crop/1400/_test-img.jpg",
+        "status": "preview",
+        "startDate": "2023-11-11",
+        "startTime": 1699700400,
+        "endDate": "2023-11-12",
+        "endTime": 1699754400,
+        "languages": [
+            "de"
+        ],
+        "audios": false,
+        "videos": false,
+        "links": {
+            "info": {
+                "url": "https://langersamstag.ch/",
+                "text": "langersamstag.ch"
             },
-            {
-                "name": "Test Audio File 2",
-                "description": "Lorem Ipsum...",
-                "url": "https://api.muva-app.ch/audio/space/langer-samstag-2.mp3"
+            "tickets": {
+                "url": "https://langersamstag.ch/informationen/tickets/",
+                "text": "Tickets"
             }
-        ],
-        "videos": [
-            {
-                "name": "Test Video File",
-                "description": "Lorem Ipsum...",
-                "url": "https://api.muva-app.ch/video/space/langer-samstag.mp3"
-            }
-        ],
-		"links": {
-			"info": {
-				"url": "https://langersamstag.ch/",
-				"text": "langersamstag.ch"
-			},
-			"tickets": {
-				"url": "https://langersamstag.ch/informationen/tickets/",
-				"text": "Tickets"
-			}
-		}
-	}
+        }
+    }
 }
 ```
 
@@ -329,29 +322,64 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/category/list?spaceId=1
     "status": 200,
     "result": [
         {
-            "id": 1,
-            "name": "Theater",
-            "icon": "https://api.muva-app.ch/icon/stage.svg"
+            "id": 4,
+            "name": "Ausstellung",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Exhibition.svg"
+        },
+        {
+            "id": 3,
+            "name": "Comedy",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Comedy-1.svg"
+        },
+        {
+            "id": 7,
+            "name": "Film",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Film-1.svg"
+        },
+        {
+            "id": 5,
+            "name": "Führung",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Tourguide-2.svg"
+        },
+        {
+            "id": 9,
+            "name": "Literatur",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Literature-1.svg"
+        },
+        {
+            "id": 11,
+            "name": "Musik",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Music-1.svg"
+        },
+        {
+            "id": 12,
+            "name": "Performance",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Theater.svg"
+        },
+        {
+            "id": 10,
+            "name": "Poetry Slam",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Poetry-2.svg"
         },
         {
             "id": 2,
             "name": "Tanz",
-            "icon": "https://api.muva-app.ch/icon/exhibit.svg"
+            "icon": "https://staging-api.muva-app.ch/img/icons/Dancing-1.svg"
         },
         {
-            "id": 3,
-            "name": "Ausstellung",
-            "icon": "https://api.muva-app.ch/icon/canvas.svg"
+            "id": 1,
+            "name": "Theater",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Theater.svg"
         },
         {
-            "id": 4,
-            "name": "Literatur",
-            "icon": "https://api.muva-app.ch/icon/book.svg"
+            "id": 6,
+            "name": "Vortrag",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Presentation-2.svg"
         },
         {
-            "id": 5,
-            "name": "Musik",
-            "icon": "https://api.muva-app.ch/icon/music.svg"
+            "id": 8,
+            "name": "Workshop",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Workshop-1.svg"
         }
     ]
 }
@@ -396,17 +424,62 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/list?spaceId=1
     "status": 200,
     "result": [
         {
-            "id": 1,
+            "id": 25,
+            "name": "Rhätische Bahn",
+            "city": "Chur",
+            "coordinates": [
+                9.530525184,
+                46.853884904
+            ]
+        },
+        {
+            "id": 29,
+            "name": "Street Art Festival Chur",
+            "city": "",
+            "coordinates": [
+                9.530814015,
+                46.851395999
+            ]
+        },
+        {
+            "id": 31,
+            "name": "Werkstatt Chur",
+            "city": "Chur",
+            "coordinates": [
+                9.530649194,
+                46.84860886
+            ]
+        },
+        {
+            "id": 27,
+            "name": "Kantonsbibliothek & Staatsarchiv Graubünden@Grossratsgebäude",
+            "city": "Chur",
+            "coordinates": [
+                9.533844347,
+                46.851792267
+            ]
+        },
+        {
+            "id": 9,
             "name": "Bündner Kunstmuseum",
             "city": "Chur",
             "coordinates": [
-                9.52926394,
-                46.849735585
+                9.532375932,
+                46.851245771
             ]
         },
         {
-            "id": 2,
-            "name": "Bündner Naturmuseum",
+            "id": 8,
+            "name": "Ausstellung Urgeschichte",
+            "city": "",
+            "coordinates": [
+                9.526069013,
+                46.862610267
+            ]
+        },
+        {
+            "id": 23,
+            "name": "Postremise",
             "city": "Chur",
             "coordinates": [
                 9.52926394,
@@ -414,21 +487,39 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/list?spaceId=1
             ]
         },
         {
-            "id": 3,
-            "name": "Chur Tourismus",
+            "id": 17,
+            "name": "ibW Schule für Gestaltung Graubünden",
             "city": "Chur",
             "coordinates": [
-                9.52926394,
-                46.849735585
+                9.529642863,
+                46.854989853
             ]
         },
         {
-            "id": 4,
-            "name": "CUADRO22",
+            "id": 13,
+            "name": "Forum Würth Chur",
             "city": "Chur",
             "coordinates": [
-                9.52926394,
-                46.849735585
+                9.528769757,
+                46.860103913
+            ]
+        },
+        {
+            "id": 19,
+            "name": "JazzChur@Marsoel Saal",
+            "city": "Chur",
+            "coordinates": [
+                9.533899582,
+                46.848195404
+            ]
+        },
+        {
+            "id": 24,
+            "name": "Rätisches Museum",
+            "city": "Chur",
+            "coordinates": [
+                9.533483505,
+                46.848099153
             ]
         }
     ]
@@ -467,33 +558,30 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/1
 {
     "status": 200,
     "result": {
-		"id": 1,
-		"name": "Bündner Kunstmuseum",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-		"img": "https://api.muva-app.ch/img/space/1200/langer-samstag.jpg",
-		"street": "Bahnhofstrasse",
-		"streetNumber": "35",
-		"addressAddition": false,
-		"postalCode": 7000,
-		"city": "Chur",
-		"email": false,
-		"phone": "+41 81 257 28 70",
-		"coordinates": [46.851348, 9.532254],
-		"gastro": {
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-			"timetableInfo": "14.00 bis 17.00 Uhr"
-		},
-		"links": {
-			"info": {
-				"url": "https://buendner-kunstmuseum.ch/",
-				"text": "buendner-kunstmuseum.ch"
-			},
-			"googleMaps": {
-				"url": "https://goo.gl/maps/ru5B57LoVCTorLQW8",
-				"text": "Google Maps"
-			}
-		}
-	}
+        "id": 25,
+        "name": "Rhätische Bahn",
+        "description": "",
+        "img": "https://staging-api.muva-app.ch/img/placeholder/900/placeholder.jpg",
+        "street": "Arosa Gleisfeld am Bahnhof (Gleis 2)",
+        "streetNumber": "",
+        "addressAddition": "",
+        "postalCode": "7000",
+        "city": "Chur",
+        "email": false,
+        "phone": false,
+        "coordinates": [
+            9.530525184,
+            46.853884904
+        ],
+        "gastro": false,
+        "links": {
+            "info": false,
+            "googleMaps": {
+                "url": "https://goo.gl/maps/xUVAitGy1czeYjFa8",
+                "text": "Google Maps"
+            }
+        }
+    }
 }
 ```
 
@@ -544,36 +632,90 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?spaceId=1
     "status": 200,
     "result": [
         {
-            "id": 1,
-            "programGuideId": 12,
-            "name": "Bündnerland, allerhand – Museumstour mal anders",
-            "icon": "https://api.muva-app.ch/icon/tour.svg",
-            "img": "https://api.muva-app.ch/img/space/600/museumstour.jpg",
-            "timetableInfo": "13.00, 17.00, 19.00 Uhr",
-            "duration": "30 Min.",
-            "category": "Musik",
+            "id": 101,
+            "programGuideId": false,
+            "name": "10 Jahre Fotostiftung Graubünden – Glanzlichter unserer Sammlung",
+            "icon": false,
+            "img": "https://staging-api.muva-app.ch/img/program/crop/500/FSGR_1156.jpg",
+            "timetableInfo": "12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00, 20:30, 21:00, 21:30, 22:00, 22:30, 23:00, 23:30, 00:00, 00:30, 01:00, 01:30, 02:00, 02:30",
+            "duration": "12 Std.",
+            "categories": [
+                "Ausstellung"
+            ],
             "location": {
-				"id": 1,
-				"name": "Bündner Kunstmuseum",
-				"city": "Chur",
-				"coordinates": [46.851348, 9.532254]
-			}
+                "id": 14,
+                "name": "Fotostiftung Graubünden",
+                "city": "Chur",
+                "coordinates": [
+                    9.533576963,
+                    46.850293567
+                ]
+            }
         },
         {
-            "id": 1,
-            "programGuideId": 14,
-            "name": "Stumm und Kurz für Kids ",
-            "icon": "https://api.muva-app.ch/icon/film.svg",
-            "img": "https://api.muva-app.ch/img/space/600/stumm.jpg",
-            "timetableInfo": "13.00, 17.00, 19.00 Uhr",
+            "id": 75,
+            "programGuideId": false,
+            "name": "1848: Eine Verfassung verändert die Schweiz",
+            "icon": false,
+            "img": "https://staging-api.muva-app.ch/img/program/crop/500/Gian-Rupf-Bundesverfassung.jpg",
+            "timetableInfo": "15:30, 18:00, 20:00",
             "duration": "30 Min.",
-            "category": "Film",
+            "categories": [
+                "Ausstellung",
+                "Literatur",
+                "Poetry Slam"
+            ],
             "location": {
-				"id": 10,
-				"name": "Klibühni, Das Theater",
-				"city": "Chur",
-				"coordinates": [46.851348, 9.532254]
-			}
+                "id": 27,
+                "name": "Kantonsbibliothek & Staatsarchiv Graubünden@Grossratsgebäude",
+                "city": "Chur",
+                "coordinates": [
+                    9.533844347,
+                    46.851792267
+                ]
+            }
+        },
+        {
+            "id": 91,
+            "programGuideId": false,
+            "name": "Albin & Eisenschmid / Elektro-Pop aus der Surselva",
+            "icon": false,
+            "img": "https://staging-api.muva-app.ch/img/program/crop/500/Leander-Albin.jpg",
+            "timetableInfo": "21:00, 22:00",
+            "duration": "30 Min.",
+            "categories": [
+                "Musik"
+            ],
+            "location": {
+                "id": 23,
+                "name": "Postremise",
+                "city": "Chur",
+                "coordinates": [
+                    9.52926394,
+                    46.849735585
+                ]
+            }
+        },
+        {
+            "id": 58,
+            "programGuideId": false,
+            "name": "Alte Filmschätze «Wildheuen in Graubünden»",
+            "icon": false,
+            "img": "https://staging-api.muva-app.ch/img/program/crop/500/AVGR11998_8.png",
+            "timetableInfo": "13:30, 16:00, 19:00",
+            "duration": "30 Min.",
+            "categories": [
+                "Film"
+            ],
+            "location": {
+                "id": 20,
+                "name": "Kantonsbibliothek & Staatsarchiv Graubünden",
+                "city": "Chur",
+                "coordinates": [
+                    9.534081206,
+                    46.849929826
+                ]
+            }
         }
     ]
 }
@@ -624,78 +766,428 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
     "status": 200,
     "result": [
         {
-        	"location": {
-				"id": 1,
-				"name": "Bündner Kunstmuseum",
-				"city": "Chur"
-			},
-			"program": [
-				{
-					"id": 1,
-					"programGuideId": 12,
-					"name": "Bündnerland, allerhand – Museumstour mal anders",
-					"icon": "https://api.muva-app.ch/icon/tour.svg",
-					"startTime": 1699693200,
-					"endTime": 1699694200				
-				},
-				{
-					"id": 2,
-					"programGuideId": 15,
-					"name": "Stick mit! Tauche ein in die Welt der Stickerei!",
-					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"startTime": 1699693200,
-					"endTime": 1699694200				
-				},
-				{
-					"id": 3,
-					"programGuideId": 16,
-					"name": "Ausstellung «Venedigsche Sterne. Kunst und Stickerei»",
-					"icon": "https://api.muva-app.ch/icon/fuehrung.svg",
-					"startTime": 1699693200,
-					"endTime": 1699694200				
-				}
-			]
+            "location": {
+                "id": 9,
+                "name": "Bündner Kunstmuseum"
+            },
+            "program": [
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699700400,
+                    "endTime": 1699702200
+                },
+                {
+                    "id": 18,
+                    "programGuideId": null,
+                    "name": "Führung Ausstellung \"Alberto Giacometti. Porträt des Künstlers als junger Mann\"",
+                    "icon": false,
+                    "startTime": 1699700400,
+                    "endTime": 1699702200
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699702200,
+                    "endTime": 1699704000
+                },
+                {
+                    "id": 20,
+                    "programGuideId": null,
+                    "name": "Künstlergespräch über künstlerische Anfänge mit Bündner Kunstschaffenden",
+                    "icon": false,
+                    "startTime": 1699704000,
+                    "endTime": 1699705800
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699704000,
+                    "endTime": 1699705800
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699705800,
+                    "endTime": 1699707600
+                },
+                {
+                    "id": 20,
+                    "programGuideId": null,
+                    "name": "Künstlergespräch über künstlerische Anfänge mit Bündner Kunstschaffenden",
+                    "icon": false,
+                    "startTime": 1699707600,
+                    "endTime": 1699709400
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699707600,
+                    "endTime": 1699709400
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699709400,
+                    "endTime": 1699711200
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699711200,
+                    "endTime": 1699713000
+                },
+                {
+                    "id": 20,
+                    "programGuideId": null,
+                    "name": "Künstlergespräch über künstlerische Anfänge mit Bündner Kunstschaffenden",
+                    "icon": false,
+                    "startTime": 1699711200,
+                    "endTime": 1699713000
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699713000,
+                    "endTime": 1699714800
+                },
+                {
+                    "id": 21,
+                    "programGuideId": null,
+                    "name": "Lesung aus dem Bilderbuch \"Giacometti und der Fuchs\"",
+                    "icon": false,
+                    "startTime": 1699713000,
+                    "endTime": 1699714800
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699714800,
+                    "endTime": 1699716600
+                },
+                {
+                    "id": 20,
+                    "programGuideId": null,
+                    "name": "Künstlergespräch über künstlerische Anfänge mit Bündner Kunstschaffenden",
+                    "icon": false,
+                    "startTime": 1699714800,
+                    "endTime": 1699716600
+                },
+                {
+                    "id": 21,
+                    "programGuideId": null,
+                    "name": "Lesung aus dem Bilderbuch \"Giacometti und der Fuchs\"",
+                    "icon": false,
+                    "startTime": 1699716600,
+                    "endTime": 1699718400
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699716600,
+                    "endTime": 1699718400
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699718400,
+                    "endTime": 1699720200
+                },
+                {
+                    "id": 18,
+                    "programGuideId": null,
+                    "name": "Führung Ausstellung \"Alberto Giacometti. Porträt des Künstlers als junger Mann\"",
+                    "icon": false,
+                    "startTime": 1699718400,
+                    "endTime": 1699720200
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699720200,
+                    "endTime": 1699722000
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699722000,
+                    "endTime": 1699723800
+                },
+                {
+                    "id": 15,
+                    "programGuideId": null,
+                    "name": "Führung Architektur. Ein Museum, zwei Gebäude",
+                    "icon": false,
+                    "startTime": 1699722000,
+                    "endTime": 1699723800
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699723800,
+                    "endTime": 1699725600
+                },
+                {
+                    "id": 15,
+                    "programGuideId": null,
+                    "name": "Führung Architektur. Ein Museum, zwei Gebäude",
+                    "icon": false,
+                    "startTime": 1699725600,
+                    "endTime": 1699727400
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699725600,
+                    "endTime": 1699727400
+                },
+                {
+                    "id": 17,
+                    "programGuideId": null,
+                    "name": "Ich immer andres. Auf den Spuren von Alberto Giacometti",
+                    "icon": false,
+                    "startTime": 1699727400,
+                    "endTime": 1699729200
+                },
+                {
+                    "id": 19,
+                    "programGuideId": null,
+                    "name": "Konzert mit Steamboat Switzerland",
+                    "icon": false,
+                    "startTime": 1699729200,
+                    "endTime": 1699731000
+                },
+                {
+                    "id": 16,
+                    "programGuideId": null,
+                    "name": "Führung Sammlung \"Bündnerland, allerhand\" Eine Museumstour mal anders",
+                    "icon": false,
+                    "startTime": 1699732800,
+                    "endTime": 1699734600
+                },
+                {
+                    "id": 19,
+                    "programGuideId": null,
+                    "name": "Konzert mit Steamboat Switzerland",
+                    "icon": false,
+                    "startTime": 1699736400,
+                    "endTime": 1699738200
+                },
+                {
+                    "id": 16,
+                    "programGuideId": null,
+                    "name": "Führung Sammlung \"Bündnerland, allerhand\" Eine Museumstour mal anders",
+                    "icon": false,
+                    "startTime": 1699740000,
+                    "endTime": 1699741800
+                }
+            ]
         },
         {
-        	"location": {
-				"id": 10,
-				"name": "Klibühni, Das Theater",
-				"city": "Chur"
-			},
-			"program": [
-				{
-					"id": 4,
-					"programGuideId": 13,
-					"name": "Stumm und Kurz für Kids ",
-					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"startTime": 1699693200,
-					"endTime": 1699694200				
-				},
-				{
-					"id": 5,
-					"programGuideId": 20,
-					"name": "Stumm und Kurz",
-					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"startTime": 1699693200,
-					"endTime": 1699694200				
-				},
-				{
-					"id": 4,
-					"programGuideId": 21,
-					"name": "Stumm und Kurz für Kids ",
-					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"startTime": 1699693200,
-					"endTime": 1699694200				
-				},
-				{
-					"id": 5,
-					"programGuideId": 22,
-					"name": "Stumm und Kurz",
-					"icon": "https://api.muva-app.ch/icon/workshop.svg",
-					"startTime": 1699693200
-					"endTime": 1699694200				
-				}
-			]
+            "location": {
+                "id": 10,
+                "name": "Bündner Naturmuseum"
+            },
+            "program": [
+                {
+                    "id": 52,
+                    "programGuideId": null,
+                    "name": "Führung durch die Sonderausstellung «Die Katze. Unser wildes Haustier»",
+                    "icon": false,
+                    "startTime": 1699702200,
+                    "endTime": 1699704000
+                },
+                {
+                    "id": 47,
+                    "programGuideId": null,
+                    "name": "Figurentheater «Der Müllersbub und das Kätzchen»",
+                    "icon": false,
+                    "startTime": 1699702200,
+                    "endTime": 1699704000
+                },
+                {
+                    "id": 47,
+                    "programGuideId": null,
+                    "name": "Figurentheater «Der Müllersbub und das Kätzchen»",
+                    "icon": false,
+                    "startTime": 1699705800,
+                    "endTime": 1699707600
+                },
+                {
+                    "id": 54,
+                    "programGuideId": null,
+                    "name": "Führung: Der Luchs – Heimlicher Bewohner unserer Wälder",
+                    "icon": false,
+                    "startTime": 1699705800,
+                    "endTime": 1699707600
+                },
+                {
+                    "id": 47,
+                    "programGuideId": null,
+                    "name": "Figurentheater «Der Müllersbub und das Kätzchen»",
+                    "icon": false,
+                    "startTime": 1699709400,
+                    "endTime": 1699711200
+                },
+                {
+                    "id": 53,
+                    "programGuideId": null,
+                    "name": "Von der Wildkatze zum Stubentiger – die Haustierwerdung am Beispiel der Hauskatze",
+                    "icon": false,
+                    "startTime": 1699709400,
+                    "endTime": 1699711200
+                },
+                {
+                    "id": 52,
+                    "programGuideId": null,
+                    "name": "Führung durch die Sonderausstellung «Die Katze. Unser wildes Haustier»",
+                    "icon": false,
+                    "startTime": 1699713000,
+                    "endTime": 1699714800
+                },
+                {
+                    "id": 55,
+                    "programGuideId": null,
+                    "name": "Film: Von Katzen und ihrer Magie",
+                    "icon": false,
+                    "startTime": 1699713000,
+                    "endTime": 1699714800
+                },
+                {
+                    "id": 47,
+                    "programGuideId": null,
+                    "name": "Figurentheater «Der Müllersbub und das Kätzchen»",
+                    "icon": false,
+                    "startTime": 1699716600,
+                    "endTime": 1699718400
+                },
+                {
+                    "id": 53,
+                    "programGuideId": null,
+                    "name": "Von der Wildkatze zum Stubentiger – die Haustierwerdung am Beispiel der Hauskatze",
+                    "icon": false,
+                    "startTime": 1699716600,
+                    "endTime": 1699718400
+                },
+                {
+                    "id": 54,
+                    "programGuideId": null,
+                    "name": "Führung: Der Luchs – Heimlicher Bewohner unserer Wälder",
+                    "icon": false,
+                    "startTime": 1699720200,
+                    "endTime": 1699722000
+                },
+                {
+                    "id": 55,
+                    "programGuideId": null,
+                    "name": "Film: Von Katzen und ihrer Magie",
+                    "icon": false,
+                    "startTime": 1699720200,
+                    "endTime": 1699722000
+                },
+                {
+                    "id": 52,
+                    "programGuideId": null,
+                    "name": "Führung durch die Sonderausstellung «Die Katze. Unser wildes Haustier»",
+                    "icon": false,
+                    "startTime": 1699723800,
+                    "endTime": 1699725600
+                },
+                {
+                    "id": 56,
+                    "programGuideId": null,
+                    "name": "Vortrag: Katzenverhalten und die Mensch-Katze-Beziehung",
+                    "icon": false,
+                    "startTime": 1699723800,
+                    "endTime": 1699726800
+                },
+                {
+                    "id": 55,
+                    "programGuideId": null,
+                    "name": "Film: Von Katzen und ihrer Magie",
+                    "icon": false,
+                    "startTime": 1699727400,
+                    "endTime": 1699729200
+                },
+                {
+                    "id": 57,
+                    "programGuideId": null,
+                    "name": "Drei Bündner mit Tiger im Tank! – eine musikalische Lesung",
+                    "icon": false,
+                    "startTime": 1699727400,
+                    "endTime": 1699729200
+                },
+                {
+                    "id": 56,
+                    "programGuideId": null,
+                    "name": "Vortrag: Katzenverhalten und die Mensch-Katze-Beziehung",
+                    "icon": false,
+                    "startTime": 1699731000,
+                    "endTime": 1699734000
+                },
+                {
+                    "id": 54,
+                    "programGuideId": null,
+                    "name": "Führung: Der Luchs – Heimlicher Bewohner unserer Wälder",
+                    "icon": false,
+                    "startTime": 1699731000,
+                    "endTime": 1699732800
+                },
+                {
+                    "id": 57,
+                    "programGuideId": null,
+                    "name": "Drei Bündner mit Tiger im Tank! – eine musikalische Lesung",
+                    "icon": false,
+                    "startTime": 1699734600,
+                    "endTime": 1699736400
+                },
+                {
+                    "id": 52,
+                    "programGuideId": null,
+                    "name": "Führung durch die Sonderausstellung «Die Katze. Unser wildes Haustier»",
+                    "icon": false,
+                    "startTime": 1699738200,
+                    "endTime": 1699740000
+                },
+                {
+                    "id": 57,
+                    "programGuideId": null,
+                    "name": "Drei Bündner mit Tiger im Tank! – eine musikalische Lesung",
+                    "icon": false,
+                    "startTime": 1699741800,
+                    "endTime": 1699743600
+                }
+            ]
         }
     ]
 }
@@ -742,88 +1234,64 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 {
     "status": 200,
     "result": {
-		"id": 1,
-		"programGuideId": 12,
-		"name": "Bündnerland, allerhand – Museumstour mal anders",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-		"icon": "https://api.muva-app.ch/icon/tour.svg",
-		"img": "https://api.muva-app.ch/img/space/1600/museumstour.jpg",
-		"startDate": "2023-11-11",
-		"endDate": "2023-11-11",
-		"timetableInfo": "13.00, 17.00, 19.00 Uhr",
-		"duration": "30 Min.",
-		"category": "Musik",
-		"location": {
-            "id": 1,
-            "name": "Bündner Kunstmuseum",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-            "img": "https://api.muva-app.ch/img/test.jpg",
-            "street": "Bahnhofstrasse",
-            "streetNumber": "35",
-            "addressAddition": false,
-            "postalCode": 7000,
+        "id": 89,
+        "programGuideId": 3,
+        "name": "\"Am Hummelwald\" - Miniaturen einer Kindheit auf dem Land",
+        "description": "«Am Hummelwald» mit dem Duo Vera Kappeler / Isa Wiss ist ein poetisch-heiter-trauriges Konzert über DAS KIND, dessen Wahrnehmungen und Erlebniswelten. In ihrer ganz eigenen musikalischen Sprache stellen die Musikerinnen den berührenden Texten deutschsprachige Lieder, Abzählreime und experimentelle Klänge gegenüber.",
+        "icon": false,
+        "img": "https://staging-api.muva-app.ch/img/program/crop/1400/Vera-und-Isa.jpg",
+        "timetableInfo": "19:00, 20:00",
+        "duration": "30 Min.",
+        "categories": [
+            {
+                "id": 11,
+                "name": "Musik"
+            }
+        ],
+        "location": {
+            "id": 23,
+            "name": "Postremise",
+            "description": "Die Postremise ist so etwas wie das heimliche Kulturzentrum von Chur. Mit zwei Bühnen und über 100 Veranstaltungen pro Jahr ist der Ort eine erfrischende Alternative in der städtischen Kulturlandschaft. Offen für professionelle Programme wie für die Amateurkultur, hat sich das Haus überregional und national einen Namen gemacht. Mit seinen Schwerpunkten Kammerkonzerte, Jazz, zeitgenössische Musik und Musiktheater ist das Kulturzentrum experimentell, bewahrend und ermöglichend zugleich. ",
+            "img": "https://staging-api.muva-app.ch/img/location/crop/1400/Banner-DJ-Fiedel-2022.jpg",
+            "street": "Engadinstrasse ",
+            "streetNumber": "43",
+            "addressAddition": "",
+            "postalCode": "7000",
             "city": "Chur",
-            "email": false,
-            "phone": "+41 81 257 28 70",
+            "email": "info@postremise.ch",
+            "phone": false,
             "coordinates": [
-                46.851348,
-                9.532254
+                9.52926394,
+                46.849735585
             ],
             "gastro": {
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-                "timetableInfo": "14.00 bis 17.00 Uhr"
+                "description": "Wieso ändern, wenn es so gut schmeckt?! Seit über zehn Jahren gibt es am Langen Samstag in der Postremise Holzofenpizza von Don Giovanni. Das bleibt auch so! Die Drinks dazu gibt’s an der Postremisen-Bar.\r\n12.00-03.00 durchgehend warme und kalte Getränke\r\n12.00-ca. 16.00 Kaffee und Kuchen\r\n12.00-ca. 24.00 Pizza ",
+                "timetableInfo": "12.00 bis 03.00 Uhr"
             },
             "links": {
                 "info": {
-                    "url": "https://buendner-kunstmuseum.ch/",
-                    "text": "buendner-kunstmuseum.ch"
+                    "url": "https://www.postremise.ch",
+                    "text": "postremise.ch"
                 },
                 "googleMaps": {
-                    "url": "https://goo.gl/maps/ru5B57LoVCTorLQW8",
+                    "url": "https://goo.gl/maps/1NqZ6pbT9SctnX9F9",
                     "text": "Google Maps"
                 }
             }
         },
-        "performanceLocation": "Atelier Kunstvermittlung",
-		"categories": [
-			{
-				"id": 1,
-				"name": "Musik",
-				"main": true
-			},
-			{
-				"id": 2,
-				"name": "Gesang",
-				"main": false
-			}
-		],
-		 "audios": [
-            {
-                "name": "Test Audio File 1",
-                "description": "Lorem Ipsum...",
-                "url": "https://api.muva-app.ch/audio/program/test.mp3"
-            },
-            {
-                "name": "Test Audio File 2",
-                "description": "Lorem Ipsum...",
-                "url": "https://api.muva-app.ch/audio/program/test-2.mp3"
-            }
-        ],
+        "performanceLocation": false,
+        "audios": false,
         "videos": false,
-		"links": {
-			"info": [
-				{
-					"url": "https://buendner-kunstmuseum.ch/",
-					"text": "buendner-kunstmuseum.ch"
-				},
-				{
-					"url": "https://kuenstlerin.ch/",
-					"text": "kuenstlerin.ch"
-				}
-			],
-			"tickets": false
-		}
-	}
+        "links": {
+            "tickets": false,
+            "info": [
+                {
+                    "url": "https://www.isawiss.ch/buehne.htm",
+                    "text": "isawiss.ch"
+                }
+            ]
+        }
+    }
 }
 ```
 
@@ -871,34 +1339,37 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/public-transport/list?spaceI
         {
             "id": 1,
             "name": "Alexanderplatz",
-            "icon": "https://api.muva-app.ch/icon/bus.svg",
-            "timetableInfo": "11.32 / .47 / .02 / .17 / 00.32 Uhr",
-            "coordinates": [46.851348, 9.532254],
+            "icon": "https://staging-api.muva-app.ch/img/icons/Bus.svg",
+            "timetableInfo": ".00 / .15 / .30 / .45 Uhr",
+            "coordinates": [
+                9.526554752,
+                46.859520225
+            ],
             "links": {
-				"sbb": false,
-				"googleMaps": {
-					"url": "https://goo.gl/maps/ru5B57LoVCTorLQW8",
-					"text": "Google Maps"
-				}
-			}
-		},
+                "sbb": false,
+                "googleMaps": {
+                    "url": "https://goo.gl/maps/fkBs4dvqTYaXfSja9",
+                    "text": "Google Maps"
+                }
+            }
+        },
         {
             "id": 2,
-            "name": "Bahnhofplatz",
-            "icon": "https://api.muva-app.ch/icon/bus.svg",
-            "timetableInfo": "11.30 / .45 / .00 / .15 / 00.30 Uhr",
-            "coordinates": [46.851348, 9.532254],
+            "name": "Bahnhofsplatz",
+            "icon": "https://staging-api.muva-app.ch/img/icons/Bus.svg",
+            "timetableInfo": ".00 / .15 / .30 / .45 Uhr",
+            "coordinates": [
+                9.529475371,
+                46.862308643
+            ],
             "links": {
-				"sbb": {
-					"url": "https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?nach=Bahnhofplatz%20Chur",
-					"text": "SBB"
-				},
-				"googleMaps": {
-					"url": "https://goo.gl/maps/ru5B57LoVCTorLQW8",
-					"text": "Google Maps"
-				}
-			}
-		}
+                "sbb": false,
+                "googleMaps": {
+                    "url": "https://goo.gl/maps/fkBs4dvqTYaXfSja9",
+                    "text": "Google Maps"
+                }
+            }
+        }
     ]
 }
 ```
