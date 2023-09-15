@@ -1395,8 +1395,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
             }
         },
         "performanceLocation": "",
-        "audios": {},
-        "videos": {},
+        "audios": [],
+        "videos": [],
         "links": {
             "tickets": {},
             "info": [
