@@ -902,9 +902,9 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/list?spaceId=1
 
 ### Response Remarks
 
-| Parameter      |Type          |Description                                                                                  |
-|:---------------|:-------------|:--------------------------------------------------------------------------------------------|
-| programGuideId |integer       |ID shown in the program guide of the event (`false` if no program guide)                     |
+| Parameter      |Type          |Description                                                    |
+|:---------------|:-------------|:--------------------------------------------------------------|
+| programGuideId |integer       |ID shown in the program guide of the event                     |
 
 
 ## <a name="get-program-timeline"></a>GET program/timeline  
@@ -1310,11 +1310,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
 
 ### Response Remarks
 
-| Parameter          |Type          |Description                                                                                  |
-|:-------------------|:-------------|:--------------------------------------------------------------------------------------------|
-| programGuideId     |integer       |ID shown in the program guide of the event (`false` if no program guide)                     |
-| program.startTime  |integer       |Unix timestamp                                                                               |
-| program.endTime    |integer       |Unix timestamp                                                                               |
+| Parameter          |Type          |Description                                                    |
+|:-------------------|:-------------|:--------------------------------------------------------------|
+| programGuideId     |integer       |ID shown in the program guide of the event                     |
+| program.startTime  |integer       |Unix timestamp                                                 |
+| program.endTime    |integer       |Unix timestamp                                                 |
 
 
 ## <a name="get-program"></a>GET program/:id
@@ -1414,7 +1414,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 
 | Parameter      |Type     |Description                                                                |
 |:---------------|:--------|:--------------------------------------------------------------------------|
-| programGuideId |integer  |ID shown in the program guide of the event (`false` if no program guide)   |
+| programGuideId |integer  |ID shown in the program guide of the event                                 |
 | links.info     |obj      |Multiple info links possible (for example, if there are multiple artists)  |
 
 
