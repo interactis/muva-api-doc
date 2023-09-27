@@ -947,7 +947,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
         {
             "location": {
                 "id": 9,
-                "name": "Bündner Kunstmuseum"
+                "name": "Bündner Kunstmuseum",
+                 "coordinates": [
+                    9.532246113,
+                    46.851327203
+                ]
             },
             "program": [
                 {
@@ -1043,7 +1047,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
         {
             "location": {
                 "id": 10,
-                "name": "Bündner Naturmuseum"
+                "name": "Bündner Naturmuseum",
+                "coordinates": [
+                    9.534372464,
+                    46.854276027
+                ]
             },
             "program": [
                 {
@@ -1219,7 +1227,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/timeline?spaceId=1
         {
             "location": {
                 "id": 11,
-                "name": "CUADRO22"
+                "name": "CUADRO22",
+                "coordinates": [
+                    9.513595258,
+                    46.851775277
+                ]
             },
             "program": [
                 {
