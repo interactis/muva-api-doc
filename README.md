@@ -190,7 +190,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "img": "https://staging-api.muva-app.ch/img/placeholder/500/placeholder.jpg",
             "status": "active",
-            "fromToDate": "11.11.2023 - 31.01.2024",
+            "fromToDate": "23.10.2023 - 31.01.2024",
             "startDate": "2023-10-23",
             "startTime": 1698033600,
             "endDate": "2024-01-31",
