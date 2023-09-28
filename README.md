@@ -64,7 +64,7 @@ Get all strings that are used in the app in the available languages. Use it to t
 
 | Parameter      |Type     |Description                                                          |                |
 |:---------------|:--------|:--------------------------------------------------------------------|:---------------|
-| lang           |string   |language code: `de`, `fr`, `it`, `rm` or `en`, default = `de`        |optional        |
+| lang           |string   |language code: `de`, `fr`, `it`, `rg` or `en`, default = `de`        |optional        |
 
 
 ### Example Request
@@ -196,7 +196,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
                 "de",
                 "fr",
                 "it",
-                "rm",
+                "rg",
                 "en"
             ]
         }
@@ -263,7 +263,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
             "de",
             "fr",
             "it",
-            "rm",
+            "rg",
             "en"
         ],
         "audios": [
