@@ -22,9 +22,9 @@
 ### Public Transport
 [GET public-transport/list](#get-public-transport-list)  
 
-### Sound Walk
-GET sound-walk/:id
-
+### Soundwalk
+GET soundwalk
+[GET soundwalk](#get-soundwalk) 
 
 ## Requests
 
@@ -1512,3 +1512,287 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/public-transport/list?spaceI
 | icon               |string   |URL to SVG icon                                                                            |
 | links.sbb          |obj      |Link to SBB timetable (not in use for Langer Samstag, but may be useful in the future)     |
 | links.googleMaps   |obj      |Link to Google Maps (useful for directions feature in GoogleMaps in the future)            |
+
+
+## <a name="get-soundwalk"></a>GET soundwalk  
+
+### Description
+
+Get a list of public transport stops of a space.
+
+### Headers
+
+| Header                 | Type     | Description    	       |                                |
+|:-----------------------|:---------|:-------------------------|:-------------------------------|
+| Api-Key                | string   | Unique API key           | Required                       |
+
+
+### Parameters
+
+| Parameter      |Type     |Description                        |                |
+|:---------------|:--------|:----------------------------------|:---------------|
+| spaceId        |integer  |ID of space                        |Required        |
+| lang           |string   |language code, default = `de`      |Optional        |
+
+
+### Example Request
+
+```
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/soundwalk?spaceId=2
+```
+
+### Example Response
+```
+{
+    "status": 200,
+    "result": {
+        "startingPoint": {
+            "name": "Hegisplatz",
+            "googleMaps": {
+                "url": "https://maps.app.goo.gl/f5oeTJ7nBGXQ4ByK7",
+                "text": "Google Maps"
+            },
+            "coordinates": [
+                9.53405,
+                46.84911
+            ]
+        },
+        "route": [
+            [
+                9.53405,
+                46.84911
+            ],
+            [
+                9.53413,
+                46.84907
+            ],
+            [
+                9.5342671,
+                46.848935
+            ],
+            [
+                9.5345127,
+                46.8490753
+            ],
+            [
+                9.5346276,
+                46.8489881
+            ],
+            [
+                9.5347585,
+                46.8489008
+            ],
+            [
+                9.5348959,
+                46.8487947
+            ],
+            [
+                9.5349371,
+                46.8487528
+            ],
+            [
+                9.5349327,
+                46.8487147
+            ],
+            [
+                9.5347896,
+                46.8486443
+            ],
+            [
+                9.5346239,
+                46.8485575
+            ],
+            [
+                9.5345249,
+                46.8484901
+            ],
+            [
+                9.53445,
+                46.84843
+            ],
+            [
+                9.53437,
+                46.84838
+            ],
+            [
+                9.53429,
+                46.84834
+            ],
+            [
+                9.5338,
+                46.84809
+            ],
+            [
+                9.53347,
+                46.848
+            ],
+            [
+                9.53342,
+                46.84799
+            ],
+            [
+                9.53329,
+                46.84799
+            ],
+            [
+                9.53257,
+                46.84805
+            ],
+            [
+                9.53247,
+                46.84808
+            ],
+            [
+                9.53247,
+                46.84809
+            ],
+            [
+                9.5325,
+                46.84821
+            ],
+            [
+                9.53251,
+                46.84827
+            ],
+            [
+                9.53253,
+                46.84834
+            ],
+            [
+                9.53259,
+                46.84858
+            ],
+            [
+                9.53265,
+                46.84878
+            ],
+            [
+                9.53289,
+                46.84937
+            ],
+            [
+                9.53299,
+                46.84959
+            ],
+            [
+                9.53336,
+                46.84962
+            ],
+            [
+                9.53342,
+                46.84975
+            ],
+            [
+                9.5339,
+                46.84968
+            ],
+            [
+                9.53387,
+                46.84961
+            ],
+            [
+                9.53382,
+                46.84951
+            ],
+            [
+                9.5337,
+                46.84938
+            ],
+            [
+                9.5337,
+                46.84928
+            ],
+            [
+                9.533655,
+                46.8490366
+            ],
+            [
+                9.5337264,
+                46.8490359
+            ],
+            [
+                9.5338354,
+                46.8490389
+            ],
+            [
+                9.5339373,
+                46.8490895
+            ],
+            [
+                9.53399,
+                46.84914
+            ],
+            [
+                9.53404,
+                46.84911
+            ],
+            [
+                9.53405,
+                46.84911
+            ]
+        ],
+        "situations": [
+            {
+                "polygon": [
+                    [
+                        9.53423,
+                        46.849857
+                    ],
+                    [
+                        9.533533,
+                        46.849157
+                    ],
+                    [
+                        9.533564,
+                        46.849157
+                    ],
+                    [
+                        9.53423,
+                        46.849857
+                    ]
+                ],
+                "timeRange": [
+                    "12:00:00",
+                    "18:00:00"
+                ],
+                "TemperaturRange": [
+                    "0",
+                    "26"
+                ],
+                "actions": [
+                    {
+                        "file": "https://url-to-file.mp3",
+                        "loop": true,
+                        "delay": false,
+                        "repeat": false,
+                        "panning": false,
+                        "triggers": {
+                            "start": "move",
+                            "end": "halt"
+                        },
+                        "fadeIn": false,
+                        "fadeOut": 3000
+                    },
+                    {
+                        "file": "https://url-to-file.mp3",
+                        "loop": false,
+                        "delay": 300,
+                        "repeat": 3,
+                        "panning": {
+                            "directional": true,
+                            "panning": -23
+                        },
+                        "triggers": false,
+                        "fadeIn": 3000,
+                        "fadeOut": false
+                    }
+                ],
+                "hints": [
+                    "Verbinde deine Kopfhörer.",
+                    "Folge der Linie auf der Karte."
+                ]
+            }
+        ]
+    }
+}
+```
