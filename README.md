@@ -23,7 +23,6 @@
 [GET public-transport/list](#get-public-transport-list)  
 
 ### Soundwalk
-GET soundwalk
 [GET soundwalk](#get-soundwalk) 
 
 ## Requests
