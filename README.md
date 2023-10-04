@@ -1515,10 +1515,6 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/public-transport/list?spaceI
 
 ## <a name="get-soundwalk"></a>GET soundwalk  
 
-### Description
-
-Get a list of public transport stops of a space.
-
 ### Headers
 
 | Header                 | Type     | Description    	       |                                |
