@@ -77,26 +77,50 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/app/messages
 {
     "status": 200,
     "result": {
-    	"Overview": "Übersicht",
-    	"Bookmarks": "Merkzettel",
-    	"Bookmark": "Merken",
-    	"Bookmarked": "Gemerkt",
-    	"Share": "Teilen",
-    	"Filter": "Filter",
-    	"Apply filters": "Filter anwenden",
-    	"Location": "Location",
+        "Start": "Start",
+        "Home": "Home",
+        "Overview": "Übersicht",
+        "Bookmarks": "Merkzettel",
+        "Bookmark": "Merken",
+        "Bookmarked": "Gemerkt",
+        "Share": "Teilen",
+        "Filter": "Filter",
+        "Locations": "Häuser",
+        "Location": "Haus",
+        "Categories": "Kategorien",
         "Category": "Kategorie",
-    	"Time / Date": "Zeit / Datum",
-    	"View": "Ansicht",
-    	"Info": "Info",
-    	"Event info": "Event Info",
-    	"Event program": "Event Programm",
-    	"Program list": "Programm Liste",
-    	"Program map": "Programm Karte",
-    	"Program schedule": "Programm Zeitplan",
-    	"To the program": "Zum Programm",
+        "Time": "Zeit",
+        "Date": "Datum",
+        "Time / Date": "Zeit / Datum",
+        "View": "Ansicht",
+        "List": "Liste",
+        "Map": "Karte",
+        "Schedule": "Zeitplan",
+        "Info": "Info",
+        "Event info": "Event Info",
+        "Event details": "Event Programm",
+        "Program list": "Programm Liste",
+        "Program map": "Programm Karte",
+        "Program schedule": "Programm Zeitplan",
+        "Go to program": "Zum Programm",
         "Listen": "Anhören",
-        "Contact": "Kontakt"
+        "Contact": "Kontakt",
+        "For kids": "Für Kinder",
+        "Please go to the starting point": "Bitte begebe dich zum Startpunkt",
+        "Back": "Zurück",
+        "Starts in": "Start in",
+        "days": "Tagen",
+        "day": "Tag",
+        "hrs.": "Std.",
+        "hr": "Std.",
+        "mins.": "Min.",
+        "min.": "Min.",
+        "secs.": "Sek.",
+        "sec.": "Sek.",
+        "Image": "Bild",
+        "Video": "Video",
+        "Audio": "Audio",
+        "Clear filters": "Filter zurücksetzen"
     }
 }
 ```
@@ -269,6 +293,10 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
             "rg",
             "en"
         ],
+        "center": [
+            9.528257532,
+            46.849757569
+        ],
         "audios": [
             {
                 "name": "Test 1 DE",
@@ -299,7 +327,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 | languages      |array    |Available content languages                                                      |
 | startTime      |integer  |Unix timestamp                                                                   |
 | endTime        |integer  |Unix timestamp                                                                   |
-
+| center         |array    |Coordinates on which the map should be centered (if type `event`)                |
 
 ## <a name="get-category-list"></a>GET category/list  
 
