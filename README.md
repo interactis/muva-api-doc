@@ -1404,7 +1404,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
         "categories": [
             {
                 "id": 11,
-                "name": "Musik"
+                "name": "Musik",
+                "icon": "https://staging-api.muva-app.ch/img/icons/Music-1.svg"
             }
         ],
         "location": {
