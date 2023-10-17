@@ -120,7 +120,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/app/messages
         "Image": "Bild",
         "Video": "Video",
         "Audio": "Audio",
-        "Clear filters": "Filter zurücksetzen"
+        "Clear filters": "Filter zurücksetzen",
+        "Gastro": "Gastro"
     }
 }
 ```
