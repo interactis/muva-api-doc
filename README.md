@@ -165,6 +165,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
     "result": [
         {
             "id": 1,
+            "latestVersion": 29,
             "color": "#BF66FF",
             "type": "event",
             "label": "Event",
@@ -185,6 +186,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
         },
         {
             "id": 2,
+            "latestVersion": 29,
             "color": "#39BF5B",
             "type": "soundwalk",
             "label": "SoundWalk",
@@ -205,6 +207,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
         },
         {
             "id": 3,
+            "latestVersion": 29,
             "color": "#FFA826",
             "type": "audio",
             "label": "Audio",
@@ -273,6 +276,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
     "status": 200,
     "result": {
         "id": 3,
+        "latestVersion": 29,
         "color": "#FFA826",
         "type": "audio",
         "label": "Audio",
