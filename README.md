@@ -315,6 +315,10 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
             }
         ],
         "videos": [],
+	 	"youtube": {
+			"url": "https://www.youtube.com/watch?v=2wH7JPtzvfE&t",
+			"thumb": "https://api.muva-app.ch/img/video/ratio/900/thumb-making-of.png"
+		},
         "links": {
             "info": {},
             "tickets": {}
