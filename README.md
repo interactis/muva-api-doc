@@ -182,7 +182,12 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             "endTime": 1699754400,
             "languages": [
                 "de"
-            ]
+            ],
+            "showTimeSlider": true,
+            "showMap": true,
+            "showCategories": true,
+            "showLocations": true,
+            "showKidsFilter": true
         },
         {
             "id": 2,
@@ -203,7 +208,12 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             "endTime": 1706741940,
             "languages": [
                 "de"
-            ]
+            ],
+            "showTimeSlider": false,
+            "showMap": false,
+        	"showCategories": false,
+        	"showLocations": false,
+        	"showKidsFilter": false
         },
         {
             "id": 3,
@@ -228,7 +238,12 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
                 "it",
                 "rg",
                 "en"
-            ]
+            ],
+        	"showTimeSlider": false,
+            "showMap": false,
+            "showCategories": false,
+            "showLocations": false,
+            "showKidsFilter": false
         }
     ]
 }
@@ -298,6 +313,11 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
             "rg",
             "en"
         ],
+        "showTimeSlider": false,
+    	"showMap": false,
+    	"showCategories": false,
+        "showLocations": false,
+    	"showKidsFilter": false,
         "center": [
             9.528257532,
             46.849757569
