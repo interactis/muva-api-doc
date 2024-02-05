@@ -239,7 +239,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
                 "rg",
                 "en"
             ],
-        	"showTimeSlider": false,
+            "showTimeSlider": false,
             "showMap": false,
             "showCategories": false,
             "showLocations": false,
