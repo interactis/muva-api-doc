@@ -642,6 +642,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/location/1
             9.530525184,
             46.853884904
         ],
+        "remarks": "",
         "gastro": {},
         "links": {
             "info": {},
