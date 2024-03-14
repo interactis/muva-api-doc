@@ -185,6 +185,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             ],
             "sponsor": {
                 "logo": "https://staging-api.muva-app.ch/img/space/sponsor/1.svg",
+                "logoWidth": 180,
+            	"logoHeight": 50,
                 "text": "Presented by"
             },
             "showTimeSlider": true,
@@ -215,6 +217,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             ],
             "sponsor": {
                 "logo": "https://staging-api.muva-app.ch/img/space/sponsor/2.svg",
+                "logoWidth": 0,
+            	"logoHeight": 0,
                 "text": "Presented by"
             },
             "showTimeSlider": false,
@@ -249,6 +253,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/list
             ],
             "sponsor": {
                 "logo": "https://staging-api.muva-app.ch/img/space/sponsor/3.svg",
+                "logoWidth": 0,
+            	"logoHeight": 0,
                 "text": "Presented by"
             },
             "showTimeSlider": false,
@@ -327,6 +333,8 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
         ],
         "sponsor": {
             "logo": "https://staging-api.muva-app.ch/img/space/sponsor/3.svg",
+            "logoWidth": 180,
+            "logoHeight": 50,
             "text": "Presented by"
         },
         "showTimeSlider": false,
