@@ -19,6 +19,14 @@
 [GET program/timeline](#get-program-timeline)  
 [GET program/:id](#get-program)  
 
+### Artist
+[GET artist/list](#get-artist-list)  
+[GET artist/:id](#get-artist)  
+
+### Gastro
+[GET gastro/list](#get-gastro-list)  
+[GET gastro/:id](#get-gastro)  
+
 ### Public Transport
 [GET public-transport/list](#get-public-transport-list)  
 
@@ -1516,6 +1524,187 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 | links.info     |obj      |Multiple info links possible (for example, if there are multiple artists)  |
 
 
+## <a name="get-artist-list"></a>GET artist/list  
+
+Get a list of all artists of a space.
+
+### Headers
+
+| Header                 | Type     | Description    	       |                                |
+|:-----------------------|:---------|:-------------------------|:-------------------------------|
+| Api-Key                | string   | Unique API key           | Required                       |
+
+
+### Parameters
+
+| Parameter      |Type     |Description                                                                                                    |                |
+|:---------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
+| spaceId        |integer  |ID of space                                                                                                    |Required        |
+| lang           |string   |language code, default = `de`                                                                                  |Optional        |
+| detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET artist/:id](#get-artist)), default = `0`      |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `xlarge`, default = `small`                                                      |Optional        |
+
+### Example Request
+
+```
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/artist/list?spaceId=1
+```
+
+### Example Response
+```
+{
+    "status": 200,
+    "result": [
+        {
+            "id": 1,
+            "name": "Luca Sisera",
+            "img": "https://api.muva-app.ch/img/artist/crop/500/_test-img-1.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Marc Jenny",
+            "img": "https://api.muva-app.ch/img/artist/crop/500/_test-img-2.jpg"
+        }
+    ]
+}
+```
+
+## <a name="get-artist"></a>GET artist/:id
+
+### Example Request
+
+Get artist infos by artist ID.
+
+
+### Headers
+
+| Header                 |Type     |Description    	         |                                |
+|:-----------------------|:--------|:------------------------|:-------------------------------|
+| Api-Key                |string   |Unique API key           |Required                        |
+
+### Parameters
+
+| Parameter      |Type     |Description                                                                 |                |
+|:---------------|:--------|:---------------------------------------------------------------------------|:---------------|
+| id             |integer  |ID of location                                                              |Required        |
+| lang           |string   |language code, default = `de`                                               |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `large`, default = `medium`                   |Optional        |
+
+### Example Request
+
+```
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/artist/1
+```
+
+### Example Response
+```
+{
+    "status": 200,
+    "result": {
+        "id": 1,
+        "name": "Luca Sisera",
+        "description": "Lorem Ipsum",
+        "img": "https://api.muva-app.ch/img/artist/crop/1400/_test-img-1.jpg",
+        "links": {
+            "info": {
+                "url": "https://luca-sisera.ch",
+                "text": "Homepage Luca Sisera"
+            }
+        }
+    }
+}
+```
+
+## <a name="get-gastro-list"></a>GET gastro/list  
+
+Get a list of all gastro locations of a space.
+
+### Headers
+
+| Header                 | Type     | Description    	       |                                |
+|:-----------------------|:---------|:-------------------------|:-------------------------------|
+| Api-Key                | string   | Unique API key           | Required                       |
+
+
+### Parameters
+
+| Parameter      |Type     |Description                                                                                                    |                |
+|:---------------|:--------|:--------------------------------------------------------------------------------------------------------------|:---------------|
+| spaceId        |integer  |ID of space                                                                                                    |Required        |
+| lang           |string   |language code, default = `de`                                                                                  |Optional        |
+| detailed       |boolean  |`1` or `0` whether a detailed result is required (as in [GET gastro/:id](#get-gastro)), default = `0`      |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `xlarge`, default = `small`                                                      |Optional        |
+
+### Example Request
+
+```
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/gastro/list?spaceId=1
+```
+
+### Example Response
+```
+{
+    "status": 200,
+    "result": [
+        {
+            "id": 1,
+            "name": "Restaurant XY",
+            "img": "https://api.muva-app.ch/img/gastro/crop/500/_test-img-1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Restaurant YZ",
+            "img": "https://api.muva-app.ch/img/gastro/crop/500/_test-img-2.jpg"
+        }
+    ]
+}
+```
+
+## <a name="get-gastro"></a>GET gastro/:id
+
+### Example Request
+
+Get gastro infos by gastro ID.
+
+
+### Headers
+
+| Header                 |Type     |Description    	         |                                |
+|:-----------------------|:--------|:------------------------|:-------------------------------|
+| Api-Key                |string   |Unique API key           |Required                        |
+
+### Parameters
+
+| Parameter      |Type     |Description                                                                 |                |
+|:---------------|:--------|:---------------------------------------------------------------------------|:---------------|
+| id             |integer  |ID of location                                                              |Required        |
+| lang           |string   |language code, default = `de`                                               |Optional        |
+| imgSize        |string   |`small`, `medium`, `large` or `large`, default = `medium`                   |Optional        |
+
+### Example Request
+
+```
+curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/gastro/1
+```
+
+### Example Response
+```
+{
+    "status": 200,
+    "result": {
+        "id": 1,
+        "name": "Restaurant XY",
+        "description": "Lorem Ipsum",
+        "img": "http://api.muva-app.ch/img/gastro/crop/1400/_test-img-1.jpg",
+        "links": {
+            "info": {
+                "url": "https://restaurant-xy.ch",
+                "text": "Homepage"
+            }
+        }
+    }
+}
+```
 
 ## <a name="get-public-transport-list"></a>GET public-transport/list  
 
