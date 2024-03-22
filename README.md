@@ -1696,6 +1696,10 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/gastro/1
         "name": "Restaurant XY",
         "description": "Lorem Ipsum",
         "img": "http://api.muva-app.ch/img/gastro/crop/1400/_test-img-1.jpg",
+        "coordinates": [
+            9.527885321,
+            46.862098187
+        ],
         "links": {
             "info": {
                 "url": "https://restaurant-xy.ch",
