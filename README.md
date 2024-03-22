@@ -1695,16 +1695,21 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/gastro/1
         "id": 1,
         "name": "Restaurant XY",
         "description": "Lorem Ipsum",
-        "img": "http://api.muva-app.ch/img/gastro/crop/1400/_test-img-1.jpg",
+        "icon": "https://api.muva-app.ch/img/icons/Comedy-2.svg",
+        "img": "https://api.muva-app.ch/img/gastro/crop/1400/_test-img-1.jpg",
+        "street": "Il Stutz",
+        "streetNumber": "12b",
+        "addressAddition": "",
+        "postalCode": "7018",
+        "city": "Flims Waldhaus",
+        "email": "",
+        "phone": "",
         "coordinates": [
-            9.527885321,
-            46.862098187
+            9.525985576,
+            46.862496694
         ],
         "links": {
-            "info": {
-                "url": "https://restaurant-xy.ch",
-                "text": "Homepage"
-            }
+            "info": {}
         }
     }
 }
