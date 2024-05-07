@@ -1616,7 +1616,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/artist/1
                 {
                     "type": "Webite",
                     "url": "https://luca-sisera.ch",
-                	"text": "Homepage Luca Sisera"
+                    "text": "Homepage Luca Sisera"
                 }
             ]
         }
