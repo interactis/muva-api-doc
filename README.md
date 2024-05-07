@@ -1505,10 +1505,16 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
         "videos": [],
         "links": {
             "tickets": {},
-            "info": [
+            "list": [
                 {
+                    "type": "Webite",
                     "url": "https://www.isawiss.ch/buehne.htm",
                     "text": "isawiss.ch"
+                },
+                {
+                    "type": "Instagram",
+                    "url": "https://www.instagram.com/p/C0WDuepqFxr/",
+                    "text": "Instagram"
                 }
             ]
         }
@@ -1518,10 +1524,10 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 
 ### Response Remarks
 
-| Parameter      |Type     |Description                                                                |
-|:---------------|:--------|:--------------------------------------------------------------------------|
-| programGuideId |integer  |ID shown in the program guide of the event                                 |
-| links.info     |obj      |Multiple info links possible (for example, if there are multiple artists)  |
+| Parameter       |Type     |Description                                                                |
+|:----------------|:--------|:--------------------------------------------------------------------------|
+| programGuideId  |integer  |ID shown in the program guide of the event                                 |
+| links.list      |obj      |Types: 'Website', 'Facebook', 'Instagram' or 'YouTube'                     |
 
 
 ## <a name="get-artist-list"></a>GET artist/list  
@@ -1606,14 +1612,24 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/artist/1
         "description": "Lorem Ipsum",
         "img": "https://api.muva-app.ch/img/artist/crop/1400/_test-img-1.jpg",
         "links": {
-            "info": {
-                "url": "https://luca-sisera.ch",
-                "text": "Homepage Luca Sisera"
-            }
+            "list": [
+                {
+                    "type": "Webite",
+                    "url": "https://luca-sisera.ch",
+                	"text": "Homepage Luca Sisera"
+                }
+            ]
         }
     }
 }
 ```
+
+### Response Remarks
+
+| Parameter       |Type     |Description                                                                |
+|:----------------|:--------|:--------------------------------------------------------------------------|
+| links.list      |obj      |Types: 'Website', 'Facebook', 'Instagram' or 'YouTube'                     |
+
 
 ## <a name="get-gastro-list"></a>GET gastro/list  
 
