@@ -1527,7 +1527,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 | Parameter       |Type     |Description                                                                |
 |:----------------|:--------|:--------------------------------------------------------------------------|
 | programGuideId  |integer  |ID shown in the program guide of the event                                 |
-| links.list      |obj      |Types: `Website`, `Facebook`, `Instagram` or `YouTube`                     |
+| links.list      |obj      |Types: `Website`, `E-Shop`, `Facebook`, `Instagram` or `YouTube`           |
 
 
 ## <a name="get-artist-list"></a>GET artist/list  
@@ -1628,7 +1628,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/artist/1
 
 | Parameter       |Type     |Description                                                                |
 |:----------------|:--------|:--------------------------------------------------------------------------|
-| links.list      |obj      |Types: `Website`, `Facebook`, `Instagram` or `YouTube`                     |
+| links.list      |obj      |Types: `Website`, `E-Shop`, `Facebook`, `Instagram` or `YouTube`           |
 
 
 ## <a name="get-gastro-list"></a>GET gastro/list  
