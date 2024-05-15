@@ -1505,6 +1505,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
         "videos": [],
         "links": {
             "tickets": {},
+            "info": [],
             "list": [
                 {
                     "type": "Webite",
@@ -1528,6 +1529,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
 |:----------------|:--------|:--------------------------------------------------------------------------|
 | programGuideId  |integer  |ID shown in the program guide of the event                                 |
 | links.list      |obj      |Types: `Website`, `E-Shop`, `Facebook`, `Instagram` or `YouTube`           |
+| links.info      |obj      |Legacy, please do not use anymore                                          |
 
 
 ## <a name="get-artist-list"></a>GET artist/list  
@@ -1608,18 +1610,37 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/artist/1
     "status": 200,
     "result": {
         "id": 1,
-        "name": "Luca Sisera",
-        "description": "Lorem Ipsum",
-        "img": "https://api.muva-app.ch/img/artist/crop/1400/_test-img-1.jpg",
+        "name": "ALEX HOHL (CH)",
+        "description": "ALEX HOHL ist freischaffender Graffitikünstler und Kunstmaler aus Zürich. Seit seinem 16. Lebensjahr ist er in der Street Art aktiv und wurde von Hip-Hop geprägt. Seine Arbeiten bewegen sich in einem breiten Spektrum von Zeichnungen, grossen Wandbildern, traditionellen Gemälden und Objektkunst.",
+        "img": "https://api.muva-app.ch/img/artist/crop/1400/Pulli_oder_T-shirt_Schwarz-2-Kopie-Kopie-4.png",
         "links": {
+            "info": {},
             "list": [
                 {
                     "type": "Webite",
-                    "url": "https://luca-sisera.ch",
-                    "text": "Homepage Luca Sisera"
+                    "url": "https://www.alexhohl.ch/",
+                    "text": "Website"
+                },
+                {
+                    "type": "Instagram",
+                    "url": "https://www.instagram.com/alex_hohl/",
+                    "text": "Instagram"
+                },
+                {
+                    "type": "Facebook",
+                    "url": "https://www.facebook.com/alex.hohl.54/",
+                    "text": "Facebook"
                 }
             ]
-        }
+        },
+        "images": [
+            {
+                "url": "https://api.muva-app.ch/img/image/crop/1400/IMG_5461-Kopie-2.jpg",
+                "name": "ALEX HOHL Werk",
+                "description": ""
+            }
+        ],
+        "program": []
     }
 }
 ```
@@ -1629,6 +1650,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/artist/1
 | Parameter       |Type     |Description                                                                |
 |:----------------|:--------|:--------------------------------------------------------------------------|
 | links.list      |obj      |Types: `Website`, `E-Shop`, `Facebook`, `Instagram` or `YouTube`           |
+| links.info      |obj      |Legacy, please do not use anymore                                          |
 
 
 ## <a name="get-gastro-list"></a>GET gastro/list  
