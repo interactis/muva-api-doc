@@ -1518,7 +1518,15 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/program/1
                     "text": "Instagram"
                 }
             ]
-        }
+        },
+        "artists": [
+            {
+                "id": 1,
+                "name": "Luca Sisera",
+                "img": "https://api.muva-app.ch/img/artist/crop/500/luca.jpg",
+                "function": "Musiker"
+            }
+        ]
     }
 }
 ```
