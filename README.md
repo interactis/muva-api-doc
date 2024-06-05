@@ -354,6 +354,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
             9.528257532,
             46.849757569
         ],
+        "initialZoom": 11,
         "audios": [
             {
                 "name": "Test 1 DE",
@@ -389,6 +390,7 @@ curl -H "Api-Key:xxxxxx" https://api.muva-app.ch/v1/space/1
 | startTime      |integer  |Unix timestamp                                                                   |
 | endTime        |integer  |Unix timestamp                                                                   |
 | center         |array    |Coordinates on which the map should be centered (if type `event`)                |
+| initialZoom    |numeric  |Initial zoom of map (if type `event`)                                            |
 
 ## <a name="get-category-list"></a>GET category/list  
 
